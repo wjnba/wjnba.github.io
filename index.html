@@ -180,6 +180,145 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-css居中的几种方式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/11/19/css%E5%B1%85%E4%B8%AD%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F.html">css居中的几种方式</a>
+    </h1>
+  
+
+        
+        <a href="/2021/11/19/css%E5%B1%85%E4%B8%AD%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F.html" class="archive-article-date">
+  	<time datetime="2021-11-19T01:06:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-11-19</time>
+</a>
+
+
+        
+        <!-- 需要添加的位置 -->
+        <!-- 开始添加字数统计-->
+        
+        <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">762字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">3分</span>
+      </span>
+    </span>
+</div>
+
+        
+        <!-- 添加完成 -->
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="css居中的几种方式"><a href="#css居中的几种方式" class="headerlink" title="css居中的几种方式"></a>css居中的几种方式</h1><h3 id="居中分水平和垂直两种，使用的频度也算是很高，下面分情况来讨论一下几种常用的实现方"><a href="#居中分水平和垂直两种，使用的频度也算是很高，下面分情况来讨论一下几种常用的实现方" class="headerlink" title="居中分水平和垂直两种，使用的频度也算是很高，下面分情况来讨论一下几种常用的实现方"></a>居中分水平和垂直两种，使用的频度也算是很高，下面分情况来讨论一下几种常用的实现方</h3><h3 id="式。"><a href="#式。" class="headerlink" title="式。"></a>式。</h3><h2 id="1-margin"><a href="#1-margin" class="headerlink" title="1.margin"></a>1.margin</h2><h3 id="这种方式只能实现固定宽度的块级元素水平居中，如果该元素没有设置宽度或者不是块级元"><a href="#这种方式只能实现固定宽度的块级元素水平居中，如果该元素没有设置宽度或者不是块级元" class="headerlink" title="这种方式只能实现固定宽度的块级元素水平居中，如果该元素没有设置宽度或者不是块级元"></a>这种方式只能实现固定宽度的块级元素水平居中，如果该元素没有设置宽度或者不是块级元</h3><h3 id="素，则不会生效。"><a href="#素，则不会生效。" class="headerlink" title="素，则不会生效。"></a>素，则不会生效。</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">/*以div元素为例*/</span><br><span class="line">div&#123;</span><br><span class="line">    width: 100px;</span><br><span class="line">    height: 100px;</span><br><span class="line">    margin: auto; /*或者margin: 0 auto;*/</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="2-line-height"><a href="#2-line-height" class="headerlink" title="2.line-height"></a>2.line-height</h2><p>###将单行文字line-height值设置为其父元素高度可以实现该行文字的垂直居中，局限也很明显。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&#x27;container&#x27;&gt;</span><br><span class="line">    &lt;p id=&#x27;content&#x27;&gt;文字内容&lt;/p&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">#container&#123;</span><br><span class="line">    height: 30px;</span><br><span class="line">&#125;</span><br><span class="line">#content&#123;</span><br><span class="line">    line-height: 30px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="3-表格"><a href="#3-表格" class="headerlink" title="3.表格"></a>3.表格</h2><p>###如果你使用表格的话，那么可以利用td元素的align:center和valign:middle属性轻易的做到水平和垂直居中，但是考虑到现在表格布局的使用频率已经很低了，实用性其实并不强。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;table&gt;</span><br><span class="line">    &lt;tr&gt;</span><br><span class="line">        &lt;td width=&#x27;200px&#x27; height=&#x27;200px&#x27; align=&#x27;center&#x27; valign=&#x27;middle&#x27;&gt;</span><br><span class="line">            &lt;!-- 子元素 --&gt;</span><br><span class="line">        &lt;/td&gt;</span><br><span class="line">    &lt;/tr&gt;</span><br><span class="line">&lt;/table&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-display-table-cell"><a href="#4-display-table-cell" class="headerlink" title="4.display: table-cell"></a>4.display: table-cell</h2><h3 id="由于单元格可以轻易的实现水平和垂直居中，所以可以把父元素容器模拟成单元格元素，通过样式text-align-center以及vertical-align-middle来达到一样的效果。但是要注意的是text-align-center只能使非块级子元素水平居中而对块级子元素无效。"><a href="#由于单元格可以轻易的实现水平和垂直居中，所以可以把父元素容器模拟成单元格元素，通过样式text-align-center以及vertical-align-middle来达到一样的效果。但是要注意的是text-align-center只能使非块级子元素水平居中而对块级子元素无效。" class="headerlink" title="由于单元格可以轻易的实现水平和垂直居中，所以可以把父元素容器模拟成单元格元素，通过样式text-align:center以及vertical-align:middle来达到一样的效果。但是要注意的是text-align:center只能使非块级子元素水平居中而对块级子元素无效。"></a>由于单元格可以轻易的实现水平和垂直居中，所以可以把父元素容器模拟成单元格元素，通过样式text-align:center以及vertical-align:middle来达到一样的效果。但是要注意的是text-align:center只能使非块级子元素水平居中而对块级子元素无效。</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;table-cel&quot;&gt;</span><br><span class="line">    &lt;div&gt;&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">#table&#123;</span><br><span class="line">    display: table-cell;</span><br><span class="line">    width: 200px;</span><br><span class="line">    height: 200px;</span><br><span class="line">    vertical-align: middle;</span><br><span class="line">    text-align: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="5-绝对定位居中"><a href="#5-绝对定位居中" class="headerlink" title="5.绝对定位居中"></a>5.绝对定位居中</h2><h3 id="这个方法使用的相对也较多，但是需要子元素有固定的宽高，不多说直接上代码。"><a href="#这个方法使用的相对也较多，但是需要子元素有固定的宽高，不多说直接上代码。" class="headerlink" title="这个方法使用的相对也较多，但是需要子元素有固定的宽高，不多说直接上代码。"></a>这个方法使用的相对也较多，但是需要子元素有固定的宽高，不多说直接上代码。</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div&gt;&lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">html,</span><br><span class="line">body&#123;</span><br><span class="line">    width: 100%;</span><br><span class="line">    height: 100%;</span><br><span class="line">&#125;</span><br><span class="line">body&#123;</span><br><span class="line">    position: relative;</span><br><span class="line">&#125;</span><br><span class="line">body&gt;div&#123;</span><br><span class="line">    position: absolute;</span><br><span class="line">    width: 100px;</span><br><span class="line">    height: 100px;</span><br><span class="line">    left: 50%;</span><br><span class="line">    top: 50%;</span><br><span class="line">    /*此时的元素并不是居中的，向右偏了一半的宽度，向下偏了一半的高度*/</span><br><span class="line">    /*所以要使用margin把元素拉回来*/</span><br><span class="line">    margin: -50px 0 0 -50px; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">15 height:  100 px;</span><br><span class="line">16 left:  50 %;</span><br><span class="line">17 top:  50 %;</span><br><span class="line">18 /*此时的元素并不是居中的，向右偏了一半的宽度，向下偏了一半的高度*/</span><br><span class="line">19 /*所以要使用margin把元素拉回来*/</span><br><span class="line">20 margin: ‐ 50 px  0 0  ‐ 50 px;</span><br><span class="line">21 &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="6-translate-50-50"><a href="#6-translate-50-50" class="headerlink" title="6.translate(-50%, -50%)"></a>6.translate(-50%, -50%)</h2><h3 id="这个方法比较厉害了，其实可以算是前面绝对定位方法的改良版。之前的方法只能使固定宽高的元素居中，但是使用transform-translate-50-50-可以使不固定高宽的元素达到居中的效果。因为translate属性的百分比值是根据它本身而非父元素，下面看代码："><a href="#这个方法比较厉害了，其实可以算是前面绝对定位方法的改良版。之前的方法只能使固定宽高的元素居中，但是使用transform-translate-50-50-可以使不固定高宽的元素达到居中的效果。因为translate属性的百分比值是根据它本身而非父元素，下面看代码：" class="headerlink" title="这个方法比较厉害了，其实可以算是前面绝对定位方法的改良版。之前的方法只能使固定宽高的元素居中，但是使用transform: translate(-50%, -50%);可以使不固定高宽的元素达到居中的效果。因为translate属性的百分比值是根据它本身而非父元素，下面看代码："></a>这个方法比较厉害了，其实可以算是前面绝对定位方法的改良版。之前的方法只能使固定宽高的元素居中，但是使用transform: translate(-50%, -50%);可以使不固定高宽的元素达到居中的效果。因为translate属性的百分比值是根据它本身而非父元素，下面看代码：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;father&quot;&gt;</span><br><span class="line">    &lt;div id=&quot;child&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">#father&#123;</span><br><span class="line">    width: 200px;</span><br><span class="line">    height: 200px;</span><br><span class="line">    position: relative;</span><br><span class="line">&#125;</span><br><span class="line">#child&#123;</span><br><span class="line">    position: absolute;</span><br><span class="line">    left: 50%;</span><br><span class="line">    top: 50%;</span><br><span class="line">    transform: translate(-50%,-50%);</span><br><span class="line">    -webkit-transform: translate(-50%,-50%);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+        <!-- 《添加版权声明 -->
+        
+          <!-- 《添加版权声明 -->
+<!--添加版权声明https://github.com/JoeyBling/hexo-theme-yilia-plus/commit/c1215e132f6d5621c5fea83d3c4f7ccbcca074a3-->
+
+
+<!-- #版权基础设定：0-关闭声明； 1-文章对应的md文件里有declare: true属性，才有版权声明； 2-所有文章均有版权声明 -->
+
+  <div class="declare" hidden="hidden"></div>
+
+<!-- 添加版权声明》 -->
+        
+        <!-- 添加版权声明》 -->
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">居中</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/深入浅出css//" class="article-tag-list-link color3">深入浅出css</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/11/19/css%E5%B1%85%E4%B8%AD%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F.html">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Vue中使用xlsx导出excel表格和把导入的excel表处理成json数据" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -520,6 +659,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">居中</a>
+              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">vue</a>
