@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wjnba.gitee.io/2021/11/22/%E4%BD%BF%E7%94%A8Hexo-Gitee%E5%85%8D%E8%B4%B9%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%BA%8C%EF%BC%89.html</loc>
+    
+    <lastmod>2021-11-22</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wjnba.gitee.io/2021/11/22/%E4%BD%BF%E7%94%A8Hexo-Gitee%E5%85%8D%E8%B4%B9%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%80%EF%BC%89.html</loc>
     
     <lastmod>2021-11-22</lastmod>
@@ -67,6 +74,20 @@
 
   
   <url>
+    <loc>https://wjnba.gitee.io/tags/css/</loc>
+    <lastmod>2021-11-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wjnba.gitee.io/tags/%E5%B1%85%E4%B8%AD/</loc>
+    <lastmod>2021-11-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://wjnba.gitee.io/tags/vue/</loc>
     <lastmod>2021-11-22</lastmod>
     <changefreq>daily</changefreq>
@@ -89,20 +110,6 @@
   
   <url>
     <loc>https://wjnba.gitee.io/tags/javascript/</loc>
-    <lastmod>2021-11-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://wjnba.gitee.io/tags/css/</loc>
-    <lastmod>2021-11-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://wjnba.gitee.io/tags/%E5%B1%85%E4%B8%AD/</loc>
     <lastmod>2021-11-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -132,14 +139,14 @@
 
   
   <url>
-    <loc>https://wjnba.gitee.io/categories/vue%E6%8F%92%E4%BB%B6/</loc>
+    <loc>https://wjnba.gitee.io/categories/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BAcss/</loc>
     <lastmod>2021-11-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://wjnba.gitee.io/categories/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BAcss/</loc>
+    <loc>https://wjnba.gitee.io/categories/vue%E6%8F%92%E4%BB%B6/</loc>
     <lastmod>2021-11-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
