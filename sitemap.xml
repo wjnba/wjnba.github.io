@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wjnba.gitee.io/2021/11/30/HTTP%E8%AF%B7%E6%B1%82.html</loc>
+    
+    <lastmod>2021-12-01</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wjnba.gitee.io/2021/11/19/css%E5%B1%85%E4%B8%AD%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F.html</loc>
     
     <lastmod>2021-11-24</lastmod>
@@ -67,71 +74,78 @@
 
   <url>
     <loc>https://wjnba.gitee.io/</loc>
-    <lastmod>2021-11-29</lastmod>
+    <lastmod>2021-12-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
+    <loc>https://wjnba.gitee.io/tags/HTTP%E8%AF%B7%E6%B1%82/</loc>
+    <lastmod>2021-12-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://wjnba.gitee.io/tags/vue/</loc>
-    <lastmod>2021-11-29</lastmod>
+    <lastmod>2021-12-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://wjnba.gitee.io/tags/excel/</loc>
-    <lastmod>2021-11-29</lastmod>
+    <lastmod>2021-12-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://wjnba.gitee.io/tags/xlsx/</loc>
-    <lastmod>2021-11-29</lastmod>
+    <lastmod>2021-12-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://wjnba.gitee.io/tags/javascript/</loc>
-    <lastmod>2021-11-29</lastmod>
+    <lastmod>2021-12-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://wjnba.gitee.io/tags/css/</loc>
-    <lastmod>2021-11-29</lastmod>
+    <lastmod>2021-12-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://wjnba.gitee.io/tags/%E5%B1%85%E4%B8%AD/</loc>
-    <lastmod>2021-11-29</lastmod>
+    <lastmod>2021-12-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://wjnba.gitee.io/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</loc>
-    <lastmod>2021-11-29</lastmod>
+    <lastmod>2021-12-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://wjnba.gitee.io/tags/Hexo/</loc>
-    <lastmod>2021-11-29</lastmod>
+    <lastmod>2021-12-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://wjnba.gitee.io/tags/Gitee-Pages/</loc>
-    <lastmod>2021-11-29</lastmod>
+    <lastmod>2021-12-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -139,29 +153,36 @@
 
   
   <url>
+    <loc>https://wjnba.gitee.io/categories/HTTP%E8%AF%B7%E6%B1%82/</loc>
+    <lastmod>2021-12-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://wjnba.gitee.io/categories/vue%E6%8F%92%E4%BB%B6/</loc>
-    <lastmod>2021-11-29</lastmod>
+    <lastmod>2021-12-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://wjnba.gitee.io/categories/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BAcss/</loc>
-    <lastmod>2021-11-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://wjnba.gitee.io/categories/Hexo-Gitee/</loc>
-    <lastmod>2021-11-29</lastmod>
+    <lastmod>2021-12-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://wjnba.gitee.io/categories/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BAjs/</loc>
-    <lastmod>2021-11-29</lastmod>
+    <lastmod>2021-12-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wjnba.gitee.io/categories/Hexo-Gitee/</loc>
+    <lastmod>2021-12-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
