@@ -3,24 +3,27 @@
 <head>
   <meta charset="utf-8">
   
+  <meta name="keywords" content="Airbnb JavaScript 代码规范">
   
+  <meta name="keywords" content="JavaScript,代码规范, wjnba,wjnba.gitee.io,giteePages,gitee pages,wjnba的博客,vue,前端开发,码农,程序员,前端,vue,js,css,个人博客,html,h5,小程序,微信小程序,钉钉小程序,web前端,app,web app,IT,开发者,程序猿,编程,代码,开源,IT网站,前端基础知识,HTML,CSS,JavaScript,jQuery,Ajax,Bootstrap">
   
-  
-  <meta name="keywords" content="wjnba,wjnba.gitee.io,giteePages,gitee pages,wjnba的博客,vue,前端开发,码农,程序员,前端,vue,js,css,个人博客,html,h5,小程序,微信小程序,钉钉小程序,web前端,app,web app,IT,开发者,程序猿,编程,代码,开源,IT网站,前端基础知识,HTML,CSS,JavaScript,jQuery,Ajax,Bootstrap">
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://wjnba.gitee.io">
-  <title>wjnba的博客</title>
+  <title>Airbnb JavaScript 代码规范 | wjnba的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="vue,前端,IT,技术">
-<meta property="og:type" content="website">
-<meta property="og:title" content="wjnba的博客">
-<meta property="og:url" content="https://wjnba.gitee.io/index.html">
+  <meta name="description" content="Airbnb JavaScript 代码规范，一种写JavaScript更合理的代码风格。 目录 类型 引用 对象 数组 解构 字符 方法 箭头函数 类和构造器 模块 迭代器和发生器 属性 变量 提升 比较运算符和等号 块 控制语句 注释 空白 逗号 分号 类型转换和强制类型转换 命名规范 存取器 事件 jQuery ECMAScript 5 兼容性 ECMAScript 6+ (ES 2015+">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Airbnb JavaScript 代码规范">
+<meta property="og:url" content="https://wjnba.gitee.io/2021/12/02/JavaScript%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83.html">
 <meta property="og:site_name" content="wjnba的博客">
-<meta property="og:description" content="vue,前端,IT,技术">
+<meta property="og:description" content="Airbnb JavaScript 代码规范，一种写JavaScript更合理的代码风格。 目录 类型 引用 对象 数组 解构 字符 方法 箭头函数 类和构造器 模块 迭代器和发生器 属性 变量 提升 比较运算符和等号 块 控制语句 注释 空白 逗号 分号 类型转换和强制类型转换 命名规范 存取器 事件 jQuery ECMAScript 5 兼容性 ECMAScript 6+ (ES 2015+">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-12-02T02:15:44.000Z">
+<meta property="article:modified_time" content="2021-12-02T02:44:23.124Z">
 <meta property="article:author" content="wjnba">
-<meta property="article:tag" content="wjnba,wjnba.gitee.io,giteePages,gitee pages,wjnba的博客,vue,前端开发,码农,程序员,前端,vue,js,css,个人博客,html,h5,小程序,微信小程序,钉钉小程序,web前端,app,web app,IT,开发者,程序猿,编程,代码,开源,IT网站,前端基础知识,HTML,CSS,JavaScript,jQuery,Ajax,Bootstrap">
+<meta property="article:tag" content="javascript">
+<meta property="article:tag" content="代码规范">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="wjnba的博客" type="application/atom+xml">
@@ -184,16 +187,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-JavaScript代码规范" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-JavaScript代码规范" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/12/02/JavaScript%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83.html">Airbnb JavaScript 代码规范</a>
+    <h1 class="article-title" itemprop="name">
+      Airbnb JavaScript 代码规范
     </h1>
   
 
@@ -201,6 +202,11 @@
         <a href="/2021/12/02/JavaScript%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83.html" class="archive-article-date">
   	<time datetime="2021-12-02T02:15:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-12-02</time>
 </a>
+
+        <!-- 不蒜子统计 -->
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
 
 
         
@@ -1428,13 +1434,64 @@ var y = 2;
 
 <!-- #版权基础设定：0-关闭声明； 1-文章对应的md文件里有declare: true属性，才有版权声明； 2-所有文章均有版权声明 -->
 
-  <div class="declare" hidden="hidden"></div>
+  <div class="declare">
+    <strong class="author">本文作者：</strong>
+    
+      wjnba
+    
+    <br>
+    <strong class="create-time">发布时间：</strong>
+    2021-12-02
+    <br>
+    <strong class="update-time">最后更新：</strong>
+    2021-12-02
+    <br>
+    <strong class="article-titles">本文标题：</strong>
+    <a href="https://wjnba.gitee.io/2021/12/02/JavaScript代码规范.html" title="Airbnb JavaScript 代码规范" target="_blank">Airbnb JavaScript 代码规范</a>
+    <br>
+    <strong class="article-url">本文链接：</strong>
+    <a href="https://wjnba.gitee.io/2021/12/02/JavaScript代码规范.html" title="Airbnb JavaScript 代码规范" target="_blank">https://wjnba.gitee.io/2021/12/02/JavaScript代码规范.html</a>
+    <br>
+    <strong class="copyright">版权声明：</strong>
+     转载请注明出处.
+  </div>
 
 <!-- 添加版权声明》 -->
         
         <!-- 添加版权声明》 -->
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/alipay-pay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/wechat-pay.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -1469,250 +1526,75 @@ var y = 2;
 
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/12/02/JavaScript%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83.html">展开全文 >></a>
-        </p>
-      
 
       
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
         
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-XMind图片去水印以及其他格式导出" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/12/01/XMind%E5%9B%BE%E7%89%87%E5%8E%BB%E6%B0%B4%E5%8D%B0%E4%BB%A5%E5%8F%8A%E5%85%B6%E4%BB%96%E6%A0%BC%E5%BC%8F%E5%AF%BC%E5%87%BA.html">XMind图片去水印以及其他格式导出</a>
-    </h1>
-  
-
-        
-        <a href="/2021/12/01/XMind%E5%9B%BE%E7%89%87%E5%8E%BB%E6%B0%B4%E5%8D%B0%E4%BB%A5%E5%8F%8A%E5%85%B6%E4%BB%96%E6%A0%BC%E5%BC%8F%E5%AF%BC%E5%87%BA.html" class="archive-article-date">
-  	<time datetime="2021-12-01T08:25:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-12-01</time>
-</a>
-
-
-        
-        <!-- 需要添加的位置 -->
-        <!-- 开始添加字数统计-->
-        
-        <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">384字</span>
-      </span>
+      </div>
     </span>
-
-    <span class="post-time">
-      &nbsp; | &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">1分</span>
-      </span>
-    </span>
+  </div>
 </div>
 
-        
-        <!-- 添加完成 -->
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>最近因为要梳理一些知识，需要用到思维导图，于是我下载了思维导图工具<code>Xmind</code>。但是在我画好图后，导出图片的时候发现图片上带有水印，只有会员才能去水印。但是我只用几次，买会员不划算，于是百度一下。在吾爱破解发现了方法，特此记录一下这次尝试。</p>
-        
-          <a class="article-more-a" href="/2021/12/01/XMind%E5%9B%BE%E7%89%87%E5%8E%BB%E6%B0%B4%E5%8D%B0%E4%BB%A5%E5%8F%8A%E5%85%B6%E4%BB%96%E6%A0%BC%E5%BC%8F%E5%AF%BC%E5%87%BA.html#more">Read More >></a>
-        
-      
-
-      
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://wjnba.gitee.io/2021/12/02/JavaScript%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83.html" alt="微信分享二维码">
     </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">软件破解</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">xmind</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">思维导图工具</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/软件破解//" class="article-tag-list-link color5">软件破解</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/12/01/XMind%E5%9B%BE%E7%89%87%E5%8E%BB%E6%B0%B4%E5%8D%B0%E4%BB%A5%E5%8F%8A%E5%85%B6%E4%BB%96%E6%A0%BC%E5%BC%8F%E5%AF%BC%E5%87%BA.html">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-HTTP请求" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/11/30/HTTP%E8%AF%B7%E6%B1%82.html">HTTP请求详解</a>
-    </h1>
-  
-
-        
-        <a href="/2021/11/30/HTTP%E8%AF%B7%E6%B1%82.html" class="archive-article-date">
-  	<time datetime="2021-11-30T01:12:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-11-30</time>
-</a>
-
-
-        
-        <!-- 需要添加的位置 -->
-        <!-- 开始添加字数统计-->
-        
-        <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">630字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp; | &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">2分</span>
-      </span>
-    </span>
 </div>
 
-        
-        <!-- 添加完成 -->
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="HTTP协议"><a href="#HTTP协议" class="headerlink" title="HTTP协议"></a>HTTP协议</h2><h4 id="一、简介"><a href="#一、简介" class="headerlink" title="一、简介"></a>一、简介</h4><p>HTTP是一个属于应用层的面向对象的协议，由于其简捷、快速的方式，适用于分布式超媒体信息系统。它于1990年提出，经过几年的使用与发展，得到不断地完善和扩展。目前在WWW中使用的是HTTP/1.0的第六版，HTTP/1.1的规范化工作正在进行之中，而且HTTP-NG(Next Generation of HTTP)的建议已经提出。</p>
-        
-          <a class="article-more-a" href="/2021/11/30/HTTP%E8%AF%B7%E6%B1%82.html#more">Read More >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">HTTP请求</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/HTTP请求//" class="article-tag-list-link color2">HTTP请求</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/11/30/HTTP%E8%AF%B7%E6%B1%82.html">展开全文 >></a>
-        </p>
-      
-
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2021/12/01/XMind%E5%9B%BE%E7%89%87%E5%8E%BB%E6%B0%B4%E5%8D%B0%E4%BB%A5%E5%8F%8A%E5%85%B6%E4%BB%96%E6%A0%BC%E5%BC%8F%E5%AF%BC%E5%87%BA.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">XMind图片去水印以及其他格式导出</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -1727,616 +1609,61 @@ var y = 2;
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-使用Hexo-Gitee免费搭建个人博客（二）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/11/22/%E4%BD%BF%E7%94%A8Hexo-Gitee%E5%85%8D%E8%B4%B9%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%BA%8C%EF%BC%89.html">使用Hexo+Gitee免费搭建个人博客（二）</a>
-    </h1>
-  
-
-        
-        <a href="/2021/11/22/%E4%BD%BF%E7%94%A8Hexo-Gitee%E5%85%8D%E8%B4%B9%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%BA%8C%EF%BC%89.html" class="archive-article-date">
-  	<time datetime="2021-11-22T05:44:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-11-22</time>
-</a>
-
-
-        
-        <!-- 需要添加的位置 -->
-        <!-- 开始添加字数统计-->
-        
-        <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">1.4k字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp; | &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">5分</span>
-      </span>
-    </span>
-</div>
-
-        
-        <!-- 添加完成 -->
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>上一篇已经准备好了搭建博客所需要的环境，接下来我们使用hexo在本地搭建博客</p>
-<h2 id="hexo搭建博客"><a href="#hexo搭建博客" class="headerlink" title="hexo搭建博客"></a><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">hexo</a>搭建博客</h2><p>首先在本地在一个盘，创建一个名为hexo的文件夹用于存放本地博客，我用的是E:\workspace\hexo，cmd进入该目录，执行以下命令，</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g  //全局安装hexo</span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2021/11/22/%E4%BD%BF%E7%94%A8Hexo-Gitee%E5%85%8D%E8%B4%B9%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%BA%8C%EF%BC%89.html#more">Read More >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">个人博客</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Gitee Pages</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Hexo-Gitee//" class="article-tag-list-link color1">Hexo+Gitee</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/11/22/%E4%BD%BF%E7%94%A8Hexo-Gitee%E5%85%8D%E8%B4%B9%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%BA%8C%EF%BC%89.html">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%AE%E5%BD%95"><span class="toc-number">1.</span> <span class="toc-text">目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B"><span class="toc-number">2.</span> <span class="toc-text">类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E7%94%A8"><span class="toc-number">3.</span> <span class="toc-text">引用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1"><span class="toc-number">4.</span> <span class="toc-text">对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E7%BB%84"><span class="toc-number">5.</span> <span class="toc-text">数组</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E6%9E%84"><span class="toc-number">6.</span> <span class="toc-text">解构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6"><span class="toc-number">7.</span> <span class="toc-text">字符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B9%E6%B3%95"><span class="toc-number">8.</span> <span class="toc-text">方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0"><span class="toc-number">9.</span> <span class="toc-text">箭头函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B1%BB%E5%92%8C%E6%9E%84%E9%80%A0%E5%99%A8"><span class="toc-number">10.</span> <span class="toc-text">类和构造器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%A1%E5%9D%97"><span class="toc-number">11.</span> <span class="toc-text">模块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%AD%E4%BB%A3%E5%99%A8%E5%92%8C%E5%8F%91%E7%94%9F%E5%99%A8"><span class="toc-number">12.</span> <span class="toc-text">迭代器和发生器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7"><span class="toc-number">13.</span> <span class="toc-text">属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%98%E9%87%8F"><span class="toc-number">14.</span> <span class="toc-text">变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%90%E5%8D%87"><span class="toc-number">15.</span> <span class="toc-text">提升</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AF%94%E8%BE%83%E8%BF%90%E7%AE%97%E7%AC%A6%E5%92%8C%E7%AD%89%E5%8F%B7"><span class="toc-number">16.</span> <span class="toc-text">比较运算符和等号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9D%97"><span class="toc-number">17.</span> <span class="toc-text">块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A7%E5%88%B6%E8%AF%AD%E5%8F%A5"><span class="toc-number">18.</span> <span class="toc-text">控制语句</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A8%E9%87%8A"><span class="toc-number">19.</span> <span class="toc-text">注释</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A9%BA%E7%99%BD"><span class="toc-number">20.</span> <span class="toc-text">空白</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E5%8F%B7"><span class="toc-number">21.</span> <span class="toc-text">分号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E5%92%8C%E5%BC%BA%E5%88%B6%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-number">22.</span> <span class="toc-text">类型转换和强制类型转换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83"><span class="toc-number">23.</span> <span class="toc-text">命名规范</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%98%E5%8F%96%E5%99%A8"><span class="toc-number">24.</span> <span class="toc-text">存取器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6"><span class="toc-number">25.</span> <span class="toc-text">事件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jQuery"><span class="toc-number">26.</span> <span class="toc-text">jQuery</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ECMAScript-5-%E5%85%BC%E5%AE%B9%E6%80%A7"><span class="toc-number">27.</span> <span class="toc-text">ECMAScript 5 兼容性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ECMAScript-6-ES-2015-Styles"><span class="toc-number">28.</span> <span class="toc-text">ECMAScript 6+ (ES 2015+) Styles</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%87%E5%87%86%E5%BA%93"><span class="toc-number">29.</span> <span class="toc-text">标准库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Testing"><span class="toc-number">30.</span> <span class="toc-text">Testing</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%A7%E8%83%BD"><span class="toc-number">31.</span> <span class="toc-text">性能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B5%84%E6%BA%90"><span class="toc-number">32.</span> <span class="toc-text">资源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JavaScript%E9%A3%8E%E6%A0%BC%E6%8C%87%E5%8D%97%E7%9A%84%E6%8C%87%E5%8D%97"><span class="toc-number">33.</span> <span class="toc-text">JavaScript风格指南的指南</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%B8%E5%8F%AF%E8%AF%81"><span class="toc-number">34.</span> <span class="toc-text">许可证</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%AE%E6%AD%A3%E6%A1%88"><span class="toc-number">35.</span> <span class="toc-text">修正案</span></a></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
-
-  
-    <article id="post-使用Hexo-Gitee免费搭建个人博客（一）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/11/22/%E4%BD%BF%E7%94%A8Hexo-Gitee%E5%85%8D%E8%B4%B9%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%80%EF%BC%89.html">使用Hexo+Gitee免费搭建个人博客（一）</a>
-    </h1>
   
 
-        
-        <a href="/2021/11/22/%E4%BD%BF%E7%94%A8Hexo-Gitee%E5%85%8D%E8%B4%B9%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%80%EF%BC%89.html" class="archive-article-date">
-  	<time datetime="2021-11-22T01:32:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-11-22</time>
-</a>
-
-
-        
-        <!-- 需要添加的位置 -->
-        <!-- 开始添加字数统计-->
-        
-        <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">341字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp; | &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">1分</span>
-      </span>
-    </span>
-</div>
-
-        
-        <!-- 添加完成 -->
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>前段时间使用有道云笔记来总结笔记的时候，发现有道云笔记使用qq无法登录，这个问题发生了几次，但是一直没得到解决。这时想到可以搭建一个属于自己的博客，来记录一些容易遗忘又非常重要的技术问题。但是对于个人而言，为了搭建个人博客去申请主机和域名，是不划算的。所以才有了使用<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">hexo</a>和<a target="_blank" rel="noopener" href="https://gitee.com/help/articles/4136#article-header0">gitee pages</a>服务来搭建免费的个人博客。</p>
-        
-          <a class="article-more-a" href="/2021/11/22/%E4%BD%BF%E7%94%A8Hexo-Gitee%E5%85%8D%E8%B4%B9%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%80%EF%BC%89.html#more">Read More >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">个人博客</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Gitee Pages</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Hexo-Gitee//" class="article-tag-list-link color1">Hexo+Gitee</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/11/22/%E4%BD%BF%E7%94%A8Hexo-Gitee%E5%85%8D%E8%B4%B9%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%80%EF%BC%89.html">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-css居中的几种方式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/11/19/css%E5%B1%85%E4%B8%AD%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F.html">css居中的几种方式</a>
-    </h1>
   
 
-        
-        <a href="/2021/11/19/css%E5%B1%85%E4%B8%AD%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F.html" class="archive-article-date">
-  	<time datetime="2021-11-19T01:06:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-11-19</time>
-</a>
-
-
-        
-        <!-- 需要添加的位置 -->
-        <!-- 开始添加字数统计-->
-        
-        <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">698字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp; | &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">3分</span>
-      </span>
-    </span>
-</div>
-
-        
-        <!-- 添加完成 -->
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="css居中的几种方式"><a href="#css居中的几种方式" class="headerlink" title="css居中的几种方式"></a>css居中的几种方式</h1><h3 id="居中分水平和垂直两种，使用的频度也算是很高，下面分情况来讨论一下几种常用的实现方式。"><a href="#居中分水平和垂直两种，使用的频度也算是很高，下面分情况来讨论一下几种常用的实现方式。" class="headerlink" title="居中分水平和垂直两种，使用的频度也算是很高，下面分情况来讨论一下几种常用的实现方式。"></a>居中分水平和垂直两种，使用的频度也算是很高，下面分情况来讨论一下几种常用的实现方式。</h3>
-        
-          <a class="article-more-a" href="/2021/11/19/css%E5%B1%85%E4%B8%AD%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F.html#more">Read More >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">居中</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/深入浅出css//" class="article-tag-list-link color3">深入浅出css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/11/19/css%E5%B1%85%E4%B8%AD%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F.html">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Vue中使用xlsx导出excel表格和把导入的excel表处理成json数据" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/11/15/Vue%E4%B8%AD%E4%BD%BF%E7%94%A8xlsx%E5%AF%BC%E5%87%BAexcel%E8%A1%A8%E6%A0%BC%E5%92%8C%E6%8A%8A%E5%AF%BC%E5%85%A5%E7%9A%84excel%E8%A1%A8%E5%A4%84%E7%90%86%E6%88%90json%E6%95%B0%E6%8D%AE.html">Vue中使用xlsx导出excel表格和把导入的excel表处理成json数据</a>
-    </h1>
   
 
-        
-        <a href="/2021/11/15/Vue%E4%B8%AD%E4%BD%BF%E7%94%A8xlsx%E5%AF%BC%E5%87%BAexcel%E8%A1%A8%E6%A0%BC%E5%92%8C%E6%8A%8A%E5%AF%BC%E5%85%A5%E7%9A%84excel%E8%A1%A8%E5%A4%84%E7%90%86%E6%88%90json%E6%95%B0%E6%8D%AE.html" class="archive-article-date">
-  	<time datetime="2021-11-15T04:47:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-11-15</time>
-</a>
-
-
-        
-        <!-- 需要添加的位置 -->
-        <!-- 开始添加字数统计-->
-        
-        <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">805字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp; | &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">4分</span>
-      </span>
-    </span>
-</div>
-
-        
-        <!-- 添加完成 -->
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Vue中使用xlsx导出excel表格和把导入的excel表处理成json数据"><a href="#Vue中使用xlsx导出excel表格和把导入的excel表处理成json数据" class="headerlink" title="Vue中使用xlsx导出excel表格和把导入的excel表处理成json数据"></a>Vue中使用xlsx导出excel表格和把导入的excel表处理成json数据</h2><h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install xlsx -S</span><br></pre></td></tr></table></figure>
-
-
-<h5 id="一、把从后台请求的结果导出为excel表格"><a href="#一、把从后台请求的结果导出为excel表格" class="headerlink" title="一、把从后台请求的结果导出为excel表格"></a>一、把从后台请求的结果导出为excel表格</h5><h6 id="创建公共方法"><a href="#创建公共方法" class="headerlink" title="创建公共方法"></a>创建公共方法</h6>
-        
-          <a class="article-more-a" href="/2021/11/15/Vue%E4%B8%AD%E4%BD%BF%E7%94%A8xlsx%E5%AF%BC%E5%87%BAexcel%E8%A1%A8%E6%A0%BC%E5%92%8C%E6%8A%8A%E5%AF%BC%E5%85%A5%E7%9A%84excel%E8%A1%A8%E5%A4%84%E7%90%86%E6%88%90json%E6%95%B0%E6%8D%AE.html#more">Read More >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">excel</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">xlsx</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/vue插件//" class="article-tag-list-link color1">vue插件</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/11/15/Vue%E4%B8%AD%E4%BD%BF%E7%94%A8xlsx%E5%AF%BC%E5%87%BAexcel%E8%A1%A8%E6%A0%BC%E5%92%8C%E6%8A%8A%E5%AF%BC%E5%85%A5%E7%9A%84excel%E8%A1%A8%E5%A4%84%E7%90%86%E6%88%90json%E6%95%B0%E6%8D%AE.html">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-pageIndex" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/11/12/pageIndex.html">扁平数据树形化</a>
-    </h1>
   
 
-        
-        <a href="/2021/11/12/pageIndex.html" class="archive-article-date">
-  	<time datetime="2021-11-12T06:53:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-11-12</time>
-</a>
-
-
-        
-        <!-- 需要添加的位置 -->
-        <!-- 开始添加字数统计-->
-        
-        <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">186字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp; | &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">1分</span>
-      </span>
-    </span>
-</div>
-
-        
-        <!-- 添加完成 -->
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * @description 扁平数据树形化</span><br><span class="line"> * @param dataList 原数组</span><br><span class="line"> * @param options （keyId：id值，childrenName：子节点数组名，parentId：父id）</span><br><span class="line"> * @param fixListItem 做其他操作</span><br><span class="line"> * @returns &#123;[]&#125;</span><br><span class="line"> */</span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2021/11/12/pageIndex.html#more">Read More >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/深入浅出js//" class="article-tag-list-link color2">深入浅出js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/11/12/pageIndex.html">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
+  
 
   
+  <section id="comments" class="comments">
+    <style>
+      .comments{margin:30px;padding:10px;background:#fff}
+      @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
+    </style>
+    <div id="vcomment" class="comment"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js'></script>
+<script src="https://cdnjs.loli.net/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    var notify = 'true' == true ? true : false;
+    var verify = 'false' == true ? true : false;
+    new Valine({
+        av: AV,
+        el: '#vcomment',
+        notify: notify,
+        app_id: "QCQaDLbJVcQ1eR1vjkOssdXn-gzGzoHsz",
+        app_key: "LACgCrTDDOdV8SSuW9AlQGGF",
+        placeholder: "ヾﾉ≧∀≦)o欢迎评论!",
+        avatar:"mm",
+    });
+</script>
+
+  </section>
   
+
 
 
           </div>
@@ -2370,8 +1697,8 @@ var y = 2;
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
