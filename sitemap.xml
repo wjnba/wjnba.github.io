@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wjnba.gitee.io/2021/12/02/JavaScript%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E8%AF%A6%E8%A7%A3.html</loc>
+    
+    <lastmod>2021-12-02</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wjnba.gitee.io/2021/12/02/JavaScript%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83.html</loc>
     
     <lastmod>2021-12-02</lastmod>
@@ -102,21 +109,14 @@
   </url>
   
   <url>
-    <loc>https://wjnba.gitee.io/tags/%E8%BD%AF%E4%BB%B6%E7%A0%B4%E8%A7%A3/</loc>
+    <loc>https://wjnba.gitee.io/tags/javascript/</loc>
     <lastmod>2021-12-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://wjnba.gitee.io/tags/xmind/</loc>
-    <lastmod>2021-12-02</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://wjnba.gitee.io/tags/%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE%E5%B7%A5%E5%85%B7/</loc>
+    <loc>https://wjnba.gitee.io/tags/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</loc>
     <lastmod>2021-12-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -144,7 +144,21 @@
   </url>
   
   <url>
-    <loc>https://wjnba.gitee.io/tags/javascript/</loc>
+    <loc>https://wjnba.gitee.io/tags/%E8%BD%AF%E4%BB%B6%E7%A0%B4%E8%A7%A3/</loc>
+    <lastmod>2021-12-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wjnba.gitee.io/tags/xmind/</loc>
+    <lastmod>2021-12-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wjnba.gitee.io/tags/%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2021-12-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -202,7 +216,7 @@
   </url>
   
   <url>
-    <loc>https://wjnba.gitee.io/categories/%E8%BD%AF%E4%BB%B6%E7%A0%B4%E8%A7%A3/</loc>
+    <loc>https://wjnba.gitee.io/categories/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BAjs/</loc>
     <lastmod>2021-12-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -216,14 +230,14 @@
   </url>
   
   <url>
-    <loc>https://wjnba.gitee.io/categories/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BAcss/</loc>
+    <loc>https://wjnba.gitee.io/categories/%E8%BD%AF%E4%BB%B6%E7%A0%B4%E8%A7%A3/</loc>
     <lastmod>2021-12-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://wjnba.gitee.io/categories/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BAjs/</loc>
+    <loc>https://wjnba.gitee.io/categories/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BAcss/</loc>
     <lastmod>2021-12-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
