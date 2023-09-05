@@ -437,6 +437,10 @@ body,
     max-height: 160px !important;
 }
 
+.tk-preview-container img{
+    max-width: 100%;
+}
+
 @media screen and (max-width: 768px) {
 
     .tk-comment .vemoji[alt|=menhera],
