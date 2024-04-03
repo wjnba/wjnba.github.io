@@ -544,6 +544,23 @@ body,
 
 /* ---- 消息弹窗(来自Heo) ---- END */
 
+/* ---- blockquote ---- START */
+blockquote {
+    border-left: 3px solid var(--tzy-xq) !important
+}
+
+#post blockquote {
+    color: var(--font-color) !important;
+    border-left: 3px solid var(--tzy-xq) !important
+}
+
+[data-theme=dark] blockquote {
+    background: var(--tzy-blog-bg) !important;
+    color: var(--font-color) !important;
+    border-left: 3px solid var(--tzy-xq) !important
+}
+/* ---- blockquote ---- END */
+
 /* ---- checkbox ---- START */
 .checkbox input[type="checkbox"]:checked {
     background: var(--tzy-theme) !important;
@@ -568,6 +585,11 @@ body,
 /* ---- checkbox ---- END */
 
 /* ---- 朋友圈样式 ---- START */
+
+#cf-container {
+    background: initial !important;
+}
+
 .cf-article {
     border: 1px solid var(--tzy-border) !important;
     /* background: rgba(73, 177, 245, .1) !important; */
@@ -642,6 +664,9 @@ body,
     display: none;
 }
 
+#cf-more:hover {
+    background: var(--tzy-theme) !important;
+}
 
 .cf-overshow {
     background: #f7f9fe !important;
