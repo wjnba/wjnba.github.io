@@ -634,9 +634,9 @@ body,
     color: #fff !important;
 }
 
-.cf-setting-btn {
-    display: none;
-}
+/*.cf-setting-btn {*/
+/*    display: none;*/
+/*}*/
 
 #cf-more~#cf-footer>div:nth-child(3) {
     display: none;
