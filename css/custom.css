@@ -713,6 +713,95 @@ blockquote {
 /* 2022-12-10 新增朋友圈功能 修复样式丢失问题 END */
 
 /* ---- 朋友圈样式 ---- END */
+
+/* ---- 首页侧边栏样式 ---- START */
+#aside-content .card-archives ul.card-archive-list, #aside-content .card-categories ul.card-category-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: -webkit-box !important;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap
+}
+
+#aside-content .card-categories ul.card-category-list > .card-category-list-item a, #aside-content .card-tag-cloud a {
+    padding: 3px 8px !important
+}
+
+#aside-content .card-categories ul.card-category-list > .card-category-list-item a:hover, #aside-content .card-tag-cloud a:hover {
+    padding: 3px 8px !important;
+    background-color: var(--tzy-theme) !important;
+    color: #fff !important;
+    transform: scale(1.1);
+    border-radius: 4px;
+    transition: all .2s ease 0s !important
+}
+
+#aside-content .card-categories ul.card-category-list > .card-category-list-item a span:first-child, #aside-content .card-tag-cloud a span.tagsPageCount {
+    width: auto;
+    flex: inherit
+}
+
+#aside-content .card-categories ul.card-category-list > .card-category-list-item a span:last-child, #aside-content .card-tag-cloud a span.tagsPageCount {
+    width: fit-content;
+    margin-left: 2px;
+    top: -.5em;
+    font-size: 75%;
+    opacity: .6;
+    position: relative
+}
+
+#aside-content .card-tag-cloud a {
+    color: var(--font-color)!important;
+    line-height: 2!important
+}
+
+/* ---- 归档 ---- */
+#aside-content .card-archives ul.card-archive-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px
+}
+
+#aside-content .card-archives ul.card-archive-list li {
+    width: calc(50% - 10px);
+    margin: 2px 0
+}
+
+#aside-content .card-archives ul.card-archive-list li a {
+    display: flex;
+    flex-direction: column !important;
+    color: var(--font-color);
+    transition: all .4s;
+    border: 1px solid var(--tzy-border);
+    border-radius: 10px;
+    padding: 5px 10px !important
+}
+
+#aside-content .card-archives ul.card-archive-list li a:hover {
+    background-color: var(--tzy-theme) !important;
+    color: #fff;
+    padding: 5px 10px !important
+}
+
+#aside-content .card-archives ul.card-archive-list li a .card-archive-list-count {
+    font-size: 1.2rem;
+    font-weight: 700
+}
+
+#aside-content .card-archives ul.card-archive-list li a .card-archive-list-count::after {
+    font-size: 14px;
+    margin-left: 3px;
+    content: "篇";
+    font-weight: 400 !important
+}
+/* ---- 首页侧边栏样式 ---- END */
+
 /* ---- 标签外挂 网站卡片 ---- START */
 
 .site-card-group img {
@@ -757,4 +846,51 @@ blockquote {
 
 .fancybox__caption {
     display: none;
+}
+
+.tag-cloud-list.is-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row
+}
+
+#page .tag-cloud-list a {
+    display: flex;
+    align-items: center;
+    font-size: 1.2em !important;
+    padding: .2em .6em;
+    margin: .5em;
+    border-radius: 12px;
+    border: 1px solid var(--tzy-border);
+    color: var(--font-color) !important
+}
+
+#page .tag-cloud-list a:hover {
+    background: var(--tzy-theme) !important;
+    color: var(--tzy-white) !important;
+    transform: none !important
+}
+
+#page .tag-cloud-list a:hover span.tagsPageCount {
+    background: var(--tzy-white) !important;
+    color: var(--font-color) !important
+}
+
+[data-theme=dark] #page .tag-cloud-list a:hover span.tagsPageCount {
+    background: var(--tzy-white) !important;
+    color: var(--tzy-theme) !important
+}
+
+#page .tag-cloud-list.is-center a span.tagsPageCount {
+    background: var(--tzy-xq);
+    padding: 5px 2px;
+    border-radius: 8px;
+    line-height: 1;
+    text-align: center;
+    min-width: 35px;
+    display: inline-block;
+    font-size: 1rem;
+    margin-left: .5em;
+    color: var(--tzy-white)
 }
