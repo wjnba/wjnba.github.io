@@ -1,13 +1,13 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>vue中使用vue-lazyload实现图片的懒加载 | wjnba的博客</title><meta name="keywords" content="vue-lazyload，懒加载，性能优化"><meta name="author" content="wjnba"><meta name="copyright" content="wjnba"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="前面在图片懒加载一文中讲到什么什么是图片懒加载和用js怎么实现懒加载，本文记录一下图片懒加载插件 vue-lazyload的使用。  一、安装依赖包npm1$ npm i vue-lazyload -S yarn1$ yarn add vue-lazyload 二、全局注册插件1234567891011&#x2F;&#x2F; 引入插件import VueLazyload from &amp;#x27;vue-lazyl">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>vue中使用vue-lazyload实现图片的懒加载 | wjnba的博客</title><meta name="keywords" content="vue-lazyload，懒加载，性能优化"><meta name="author" content="wjnba"><meta name="copyright" content="wjnba"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="前面在图片懒加载一文中讲到什么什么是图片懒加载和用js怎么实现懒加载，本文记录一下图片懒加载插件 vue-lazyload的使用。  一、安装依赖包npm1npm i vue-lazyload -S yarn1yarn add vue-lazyload 二、全局注册插件1234567891011&#x2F;&#x2F; 引入插件import VueLazyload from &amp;#x27;vue-lazyload&amp;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vue中使用vue-lazyload实现图片的懒加载">
 <meta property="og:url" content="https://www.wjnba.top/articles/20240416e2cba8f4e7fb.html">
 <meta property="og:site_name" content="wjnba的博客">
-<meta property="og:description" content="前面在图片懒加载一文中讲到什么什么是图片懒加载和用js怎么实现懒加载，本文记录一下图片懒加载插件 vue-lazyload的使用。  一、安装依赖包npm1$ npm i vue-lazyload -S yarn1$ yarn add vue-lazyload 二、全局注册插件1234567891011&#x2F;&#x2F; 引入插件import VueLazyload from &amp;#x27;vue-lazyl">
+<meta property="og:description" content="前面在图片懒加载一文中讲到什么什么是图片懒加载和用js怎么实现懒加载，本文记录一下图片懒加载插件 vue-lazyload的使用。  一、安装依赖包npm1npm i vue-lazyload -S yarn1yarn add vue-lazyload 二、全局注册插件1234567891011&#x2F;&#x2F; 引入插件import VueLazyload from &amp;#x27;vue-lazyload&amp;">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://pic.wjnba.top/img/blog-cover-32.png">
 <meta property="article:published_time" content="2024-04-16T09:24:17.000Z">
-<meta property="article:modified_time" content="2024-04-18T08:40:25.414Z">
+<meta property="article:modified_time" content="2024-04-19T07:22:42.416Z">
 <meta property="article:author" content="wjnba">
 <meta property="article:tag" content="vue">
 <meta property="article:tag" content="性能优化">
@@ -64,7 +64,7 @@
   isHome: false,
   isHighlightShrink: false,
   isToc: true,
-  postUpdate: '2024-04-18 16:40:25'
+  postUpdate: '2024-04-19 15:22:42'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -154,102 +154,102 @@
     }
     detectApple()
     })(window)</script><link rel="stylesheet" href="/css/custom.css"><link rel="stylesheet" href="/css/function.min.css"><meta name="baidu-site-verification" content="codeva-pEF91p4v9G" /><!-- hexo injector head_end start --><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/animate.min.css" media="print" onload="this.media='screen'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css" media="defer" onload="this.media='all'"><script src="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js"></script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="wjnba的博客" type="application/atom+xml">
-</head><body><div id="loading-box"><div class="gear-loader"><div class="gear-loader_overlay"></div><div class="gear-loader_cogs"><div class="gear-loader_cogs__top"><div class="gear-top_part"></div><div class="gear-top_part"></div><div class="gear-top_part"></div><div class="gear-top_hole"></div></div><div class="gear-loader_cogs__left"><div class="gear-left_part"></div><div class="gear-left_part"></div><div class="gear-left_part"></div><div class="gear-left_hole"></div></div><div class="gear-loader_cogs__bottom"><div class="gear-bottom_part"></div><div class="gear-bottom_part"></div><div class="gear-bottom_part"></div><div class="gear-bottom_hole"></div></div></div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "/img/loading.gif" data-lazy-src="https://q1.qlogo.cn/g?b=qq&amp;nk=1746040223&amp;s=100" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">32</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">26</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">14</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-book"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 图册</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-user-group"></i><span> 社交</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/comments/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></li><li><a class="site-page child" href="/fcircle/"><i class="fa-fw fas fa-wifi"></i><span> 朋友圈</span></a></li><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/collections/"><i class="fa-fw fas fa-infinity"></i><span> 网址收藏</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://pic.wjnba.top/img/202404/20240416173508.webp')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">wjnba的博客</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-book"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 图册</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-user-group"></i><span> 社交</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/comments/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></li><li><a class="site-page child" href="/fcircle/"><i class="fa-fw fas fa-wifi"></i><span> 朋友圈</span></a></li><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/collections/"><i class="fa-fw fas fa-infinity"></i><span> 网址收藏</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">vue中使用vue-lazyload实现图片的懒加载</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2024-04-16T09:24:17.000Z" title="发表于 2024-04-16 17:24:17">2024-04-16</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/vue-%E6%8F%92%E4%BB%B6/">vue 插件</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">703</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>3分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="vue中使用vue-lazyload实现图片的懒加载"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p><img src= "/img/loading.gif" data-lazy-src="https://pic.wjnba.top/img/202404/20240418153949.webp" alt=""></p>
+</head><body><div id="loading-box"><div class="gear-loader"><div class="gear-loader_overlay"></div><div class="gear-loader_cogs"><div class="gear-loader_cogs__top"><div class="gear-top_part"></div><div class="gear-top_part"></div><div class="gear-top_part"></div><div class="gear-top_hole"></div></div><div class="gear-loader_cogs__left"><div class="gear-left_part"></div><div class="gear-left_part"></div><div class="gear-left_part"></div><div class="gear-left_hole"></div></div><div class="gear-loader_cogs__bottom"><div class="gear-bottom_part"></div><div class="gear-bottom_part"></div><div class="gear-bottom_part"></div><div class="gear-bottom_hole"></div></div></div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "/img/loading.gif" data-lazy-src="https://q1.qlogo.cn/g?b=qq&amp;nk=1746040223&amp;s=100" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">32</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">26</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">14</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-book"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 图册</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-user-group"></i><span> 社交</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/comments/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></li><li><a class="site-page child" href="/fcircle/"><i class="fa-fw fas fa-wifi"></i><span> 朋友圈</span></a></li><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/collections/"><i class="fa-fw fas fa-infinity"></i><span> 网址收藏</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://pic.wjnba.top/img/202404/20240416173508.webp')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">wjnba的博客</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-book"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 图册</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-user-group"></i><span> 社交</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/comments/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></li><li><a class="site-page child" href="/fcircle/"><i class="fa-fw fas fa-wifi"></i><span> 朋友圈</span></a></li><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/collections/"><i class="fa-fw fas fa-infinity"></i><span> 网址收藏</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">vue中使用vue-lazyload实现图片的懒加载</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2024-04-16T09:24:17.000Z" title="发表于 2024-04-16 17:24:17">2024-04-16</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/vue-%E6%8F%92%E4%BB%B6/">vue 插件</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">701</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>3分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="vue中使用vue-lazyload实现图片的懒加载"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p><img src= "/img/loading.gif" data-lazy-src="https://pic.wjnba.top/img/202404/20240418153949.webp" alt=""></p>
 <blockquote>
 <p>前面在<a href="https://www.wjnba.top/articles/20220530043ea0d0d7dd.html">图片懒加载</a>一文中讲到什么什么是图片懒加载和用<code>js</code>怎么实现懒加载，本文记录一下图片懒加载插件 <code>vue-lazyload</code>的使用。</p>
 </blockquote>
-<h2 id="一、安装依赖包"><a href="#一、安装依赖包" class="headerlink" title="一、安装依赖包"></a>一、安装依赖包</h2><h4 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm i vue-lazyload -S</span><br></pre></td></tr></table></figure>
-<h4 id="yarn"><a href="#yarn" class="headerlink" title="yarn"></a>yarn</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ yarn add vue-lazyload</span><br></pre></td></tr></table></figure>
+<h2 id="一、安装依赖包"><a href="#一、安装依赖包" class="headerlink" title="一、安装依赖包"></a>一、安装依赖包</h2><h4 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i vue-lazyload -S</span><br></pre></td></tr></table></figure>
+<h4 id="yarn"><a href="#yarn" class="headerlink" title="yarn"></a>yarn</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add vue-lazyload</span><br></pre></td></tr></table></figure>
 <h2 id="二、全局注册插件"><a href="#二、全局注册插件" class="headerlink" title="二、全局注册插件"></a>二、全局注册插件</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 引入插件</span></span><br><span class="line"><span class="keyword">import</span> VueLazyload <span class="keyword">from</span> <span class="string">&#x27;vue-lazyload&#x27;</span></span><br><span class="line"><span class="comment">// 注册插件</span></span><br><span class="line"><span class="keyword">const</span> loadimage = <span class="built_in">require</span>(<span class="string">&#x27;./assets/loading.gif&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> errorimage = <span class="built_in">require</span>(<span class="string">&#x27;./assets/error.gif&#x27;</span>)</span><br><span class="line">Vue.use(VueLazyload, &#123;</span><br><span class="line">  <span class="attr">preLoad</span>: <span class="number">1.3</span>,</span><br><span class="line">  <span class="attr">error</span>: errorimage,</span><br><span class="line">  <span class="attr">loading</span>: loadimage,</span><br><span class="line">  <span class="attr">attempt</span>: <span class="number">1</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <p>配置项参数说明：</p>
 <div class="table-container">
 <table>
 <thead>
 <tr>
-<th><strong>键</strong></th>
+<th style="text-align:center"><strong>键</strong></th>
 <th><strong>描述</strong></th>
 <th><strong>默认值</strong></th>
-<th><strong>选项</strong></th>
+<th style="text-align:center"><strong>选项</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>preLoad</td>
+<td style="text-align:center">preLoad</td>
 <td>表示lazyload的元素,<br />距离页面底部距离的百分比.<br/>计算值为(preload - 1)</td>
 <td>1.3</td>
-<td>Number</td>
+<td style="text-align:center">Number</td>
 </tr>
 <tr>
-<td>error</td>
+<td style="text-align:center">error</td>
 <td>加载失败后图片地址</td>
 <td>‘data-src’</td>
-<td>String</td>
+<td style="text-align:center">String</td>
 </tr>
 <tr>
-<td>loading</td>
+<td style="text-align:center">loading</td>
 <td>加载时图片地址</td>
 <td>‘data-src’</td>
-<td>String</td>
+<td style="text-align:center">String</td>
 </tr>
 <tr>
-<td>attempt</td>
+<td style="text-align:center">attempt</td>
 <td>图片加载失败后的重试次数</td>
 <td>3</td>
-<td>Number</td>
+<td style="text-align:center">Number</td>
 </tr>
 <tr>
-<td>listenEvents</td>
+<td style="text-align:center">listenEvents</td>
 <td>触发懒加载的事件</td>
 <td>[<br />‘scroll’,<br /> ‘wheel’,<br /> ‘mousewheel’,<br /> ‘resize’, <br />‘animationend’, <br />‘transitionend’,<br /> ‘touchmove’<br />]</td>
-<td>无</td>
+<td style="text-align:center">无</td>
 </tr>
 <tr>
-<td>adapter</td>
+<td style="text-align:center">adapter</td>
 <td>注册img 的loading,loaded,error<br/>三个状态的回调函数,<br/>参数会暴露懒加载的img元素,<br/>可以对其进行操作.</td>
 <td>{ }</td>
-<td>无</td>
+<td style="text-align:center">无</td>
 </tr>
 <tr>
-<td>filter</td>
+<td style="text-align:center">filter</td>
 <td>img未加载之前,<br/>解析到src 的时候注册的回调函数.<br/>可以在加载图片之前,对src进行修改.<br/>注册在filter下的所有的函数都会执行</td>
 <td>{ }</td>
-<td>无</td>
+<td style="text-align:center">无</td>
 </tr>
 <tr>
-<td>lazyComponent</td>
+<td style="text-align:center">lazyComponent</td>
 <td>是否启用懒加载组件.<br/><lazy-component>组件中的内容<br/>只有在出现在preload的<br/>位置中才会加载组件.<br/>这个lazyloadComponent<br/>组件有个缺点<br/>就是,组件在加载前<br/>是什么都不渲染的,<br/>这样子的话,有可能会影响布局,<br/>以及加载前到加载后的切换不好,<br/>有点突兀和生硬.</td>
 <td>false</td>
-<td>无</td>
+<td style="text-align:center">无</td>
 </tr>
 <tr>
-<td>dispatchEvent</td>
+<td style="text-align:center">dispatchEvent</td>
 <td>触发dom事件</td>
 <td>false</td>
-<td>Boolean</td>
+<td style="text-align:center">Boolean</td>
 </tr>
 <tr>
-<td>throttleWait</td>
+<td style="text-align:center">throttleWait</td>
 <td>等待时长</td>
 <td>200</td>
-<td>Number</td>
+<td style="text-align:center">Number</td>
 </tr>
 <tr>
-<td>observer</td>
+<td style="text-align:center">observer</td>
 <td>是否启用IntersectionObserver, 这个api有<a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https%3A%2F%2Fcaniuse.com%2F%23search%3DIntersectionobserver">兼容问题</a></td>
 <td>false</td>
-<td>Boolean</td>
+<td style="text-align:center">Boolean</td>
 </tr>
 <tr>
-<td>observerOptions</td>
+<td style="text-align:center">observerOptions</td>
 <td>IntersectionObserver选项</td>
 <td>{ rootMargin: ‘0px’, threshold: 0.1 }</td>
-<td>无</td>
+<td style="text-align:center">无</td>
 </tr>
 <tr>
-<td>silent</td>
+<td style="text-align:center">silent</td>
 <td>不打印调试信息</td>
 <td>true</td>
-<td>Boolean</td>
+<td style="text-align:center">Boolean</td>
 </tr>
 </tbody>
 </table>
