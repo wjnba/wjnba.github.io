@@ -894,3 +894,22 @@ blockquote {
     margin-left: .5em;
     color: var(--tzy-white)
 }
+
+
+/* 欢迎信息 */
+/*#welcome-info {*/
+/*    background: linear-gradient(45deg, #b9f4f3, #e3fbf9);*/
+/*    border-radius: 18px;*/
+/*    padding: 8px;*/
+/*    font-family: tzy !important;*/
+/*}*/
+/*[data-theme="dark"] #welcome-info {*/
+/*    background: #212121;*/
+/*    font-family: tzy !important;*/
+/*}*/
+
+/*Heo同款loading动画*/
+.loading-img {
+    background: url(https://q1.qlogo.cn/g?b=qq&nk=1746040223&s=100) no-repeat center center;
+    background-size: cover;
+}
