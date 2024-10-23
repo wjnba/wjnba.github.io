@@ -407,7 +407,7 @@
   </url>
   
   <url>
-    <loc>https://www.wjnba.top/Gallery/wallpaper/index.html</loc>
+    <loc>https://www.wjnba.top/Gallery/iu/index.html</loc>
     
     <lastmod>2023-09-04</lastmod>
     
@@ -416,7 +416,7 @@
   </url>
   
   <url>
-    <loc>https://www.wjnba.top/Gallery/iu/index.html</loc>
+    <loc>https://www.wjnba.top/Gallery/wallpaper/index.html</loc>
     
     <lastmod>2023-09-04</lastmod>
     
@@ -443,6 +443,20 @@
 
   
   <url>
+    <loc>https://www.wjnba.top/tags/css/</loc>
+    <lastmod>2024-10-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.wjnba.top/tags/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80/</loc>
+    <lastmod>2024-10-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://www.wjnba.top/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</loc>
     <lastmod>2024-10-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -458,20 +472,6 @@
   
   <url>
     <loc>https://www.wjnba.top/tags/Gitee-Pages/</loc>
-    <lastmod>2024-10-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.wjnba.top/tags/css/</loc>
-    <lastmod>2024-10-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.wjnba.top/tags/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80/</loc>
     <lastmod>2024-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -562,6 +562,13 @@
   </url>
   
   <url>
+    <loc>https://www.wjnba.top/tags/%E5%B1%85%E4%B8%AD/</loc>
+    <lastmod>2024-10-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://www.wjnba.top/tags/butterfly/</loc>
     <lastmod>2024-10-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -569,7 +576,7 @@
   </url>
   
   <url>
-    <loc>https://www.wjnba.top/tags/%E5%B1%85%E4%B8%AD/</loc>
+    <loc>https://www.wjnba.top/tags/node/</loc>
     <lastmod>2024-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -590,13 +597,6 @@
   </url>
   
   <url>
-    <loc>https://www.wjnba.top/tags/node/</loc>
-    <lastmod>2024-10-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.wjnba.top/tags/wangeditor/</loc>
     <lastmod>2024-10-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -604,14 +604,14 @@
   </url>
   
   <url>
-    <loc>https://www.wjnba.top/tags/%E5%9C%B0%E5%9B%BE/</loc>
+    <loc>https://www.wjnba.top/tags/%E5%89%8D%E7%AB%AF%E9%80%82%E9%85%8D/</loc>
     <lastmod>2024-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.wjnba.top/tags/%E5%89%8D%E7%AB%AF%E9%80%82%E9%85%8D/</loc>
+    <loc>https://www.wjnba.top/tags/%E5%9C%B0%E5%9B%BE/</loc>
     <lastmod>2024-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -641,14 +641,14 @@
 
   
   <url>
-    <loc>https://www.wjnba.top/categories/Hexo-Gitee/</loc>
+    <loc>https://www.wjnba.top/categories/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BAcss/</loc>
     <lastmod>2024-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.wjnba.top/categories/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BAcss/</loc>
+    <loc>https://www.wjnba.top/categories/Hexo-Gitee/</loc>
     <lastmod>2024-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -697,6 +697,13 @@
   </url>
   
   <url>
+    <loc>https://www.wjnba.top/categories/node/</loc>
+    <lastmod>2024-10-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://www.wjnba.top/categories/uniapp/</loc>
     <lastmod>2024-10-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -705,13 +712,6 @@
   
   <url>
     <loc>https://www.wjnba.top/categories/vue3/</loc>
-    <lastmod>2024-10-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.wjnba.top/categories/node/</loc>
     <lastmod>2024-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
