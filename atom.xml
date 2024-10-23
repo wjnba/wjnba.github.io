@@ -6,7 +6,7 @@
   <link href="https://www.wjnba.top/atom.xml" rel="self"/>
   
   <link href="https://www.wjnba.top/"/>
-  <updated>2024-10-18T08:41:28.708Z</updated>
+  <updated>2024-10-23T02:42:00.846Z</updated>
   <id>https://www.wjnba.top/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Sourcetree GIt工作流使用及分支开发模式</title>
+    <link href="https://www.wjnba.top/articles/20241022bb4ed2208a4c.html"/>
+    <id>https://www.wjnba.top/articles/20241022bb4ed2208a4c.html</id>
+    <published>2024-10-22T08:36:27.000Z</published>
+    <updated>2024-10-23T02:42:00.846Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://pic.wjnba.top/img/202410/20241022163858.webp" alt="image-20241022163848446"></p><h2 id="一般的企业级开发分支共有5种类型"><a href="#一般的企业级开发分支共有5种类型" class="headerlink" title="一般的企业级开发分支共有5种类型"></a>一般的企业级开发分支共有5种类型</h2><ol><li><code>master</code>，最终发布版本，整个项目中有且只有一个。</li><li><code>develop</code>，项目的开发分支，原则上项目中有且只有一个。</li><li><code>feature</code>，功能分支，用于开发一个新的功能。</li><li><code>release</code>，预发布版本，介于<code>develop</code>和<code>master</code>之间的一个版本，用于测试。</li><li><code>hotfix</code>，修复补丁，用于修复<code>master</code>上的<code>bug</code>，直接作用于<code>master</code>。</li></ol><h2 id="SourceTree一般开发模式："><a href="#SourceTree一般开发模式：" class="headerlink" title="SourceTree一般开发模式："></a>SourceTree一般开发模式：</h2><ol><li>开发任务都是在<code>develop</code>分支上完成的，当开发中需要增加一个新的功能时，可新建<code>feature</code>分支，用于增加新功能，并且不影响开发中的<code>develop</code>源码，当新功能增加完成后，完成<code>feature</code>分支，将新功能合并到<code>develop</code>中，更新<code>develop</code>上的代码。</li></ol><p><strong>操作：</strong></p><p>①分支选择<code>develop</code>，点击Git工作流，选择“建立新的功能”，以功能命名分支，并把生成的分支推到远程仓库，如下图：</p><p><img src="https://pic.wjnba.top/img/202410/20241023104051.webp" alt="image-20241023093010382"></p><p><img src="https://pic.wjnba.top/img/202410/20241023104056.webp" alt="image-20241023093120971"></p><p>②完成功能开发后，将当前分支指向该分支（如上图“首页”分支），点击“Git工作流”，选择“完成功能”，将新功能合并到<code>develop</code>中，更新<code>develop</code>上的代码，如下图：</p><p><img src="https://pic.wjnba.top/img/202410/20241023104103.webp" alt="image-20241023093726320"  /></p><p><img src="https://pic.wjnba.top/img/202410/20241023104111.webp" alt="image-20241023093852172"></p><ol><li>当开发到一定阶段，可以发布测试版本时，可以从<code>develop</code>分支，建立<code>release</code>分支。</li></ol><p><strong>操作：</strong></p><p>①点击“Git工作流”，选择”建立新的发布版本“，如下图：</p><p><img src="https://pic.wjnba.top/img/202410/20241023104117.webp" alt="image-20241023095559651"></p><p>②输入发布版本名，可以用日期命名，如下图：</p><p><img src="https://pic.wjnba.top/img/202410/20241023104121.webp" alt="image-20241023095835174"></p><ol><li>如果在测试过程中发现问题，直接在<code>release</code>（上图20241023）上进行修改，修改完成后进行提交。</li><li>对<code>release</code>（上图20241023）分支进行修改后，测试通过，完成发布版本，走完新功能开发流程。</li></ol><p><strong>操作：</strong></p><p>①在当前分支指向该分支下，点击“Git工作流”，选择“完成发布版本”，然后可以在预览中可以看到，该分支向develop和master分别合并，点击确定，如下图：</p><p><img src="https://pic.wjnba.top/img/202410/20241023104126.webp" alt="image-20241023100457252"></p><p><img src="https://pic.wjnba.top/img/202410/20241023104131.webp" alt="image-20241023100656610"></p><ol><li><p>当新功能测试通过后，可以进行正式版本的发布。如下图：</p><p><img src="https://pic.wjnba.top/img/202410/20241023104135.webp" alt="image-20241023103317697"></p><p><img src="https://pic.wjnba.top/img/202410/20241023104141.webp" alt="image-20241023103506313"></p></li><li><p>正式版本发布后，<code>develop</code>可继续进行后续开发，当正式版本出现问题时，需要进行问题的修改，可以在主分支（<code>main</code>）分支建立修改补丁<code>hotfix</code>。将当前分支切换到主分支（<code>main</code>），点击“Git工作流”，选择“建立新的修复补丁”。在该分支下进行主分支（<code>main</code>）的问题修改，修改完成后进行提交。当所有补丁问题修改完成后，点击“Git工作流”，选择“完成修复补丁”。</p></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://pic.wjnba.top/img/202410/20241022163858.webp&quot; alt=&quot;image-20241022163848446&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;一般的企业级开发分支共有5种类型&quot;&gt;&lt;a href=&quot;#一般</summary>
+      
+    
+    
+    
+    <category term="代码规范" scheme="https://www.wjnba.top/categories/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/"/>
+    
+    
+    <category term="Git" scheme="https://www.wjnba.top/tags/Git/"/>
+    
+    <category term="代码规范" scheme="https://www.wjnba.top/tags/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/"/>
+    
+  </entry>
   
   <entry>
     <title>正则表达式学习</title>
@@ -170,9 +197,9 @@
     <category term="代码规范" scheme="https://www.wjnba.top/categories/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/"/>
     
     
-    <category term="javascript" scheme="https://www.wjnba.top/tags/javascript/"/>
-    
     <category term="代码规范" scheme="https://www.wjnba.top/tags/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/"/>
+    
+    <category term="javascript" scheme="https://www.wjnba.top/tags/javascript/"/>
     
   </entry>
   
@@ -485,27 +512,6 @@
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;通过类型声</summary>
       
-    
-    
-    
-    <category term="Typescript基础" scheme="https://www.wjnba.top/categories/Typescript%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="Typescript" scheme="https://www.wjnba.top/tags/Typescript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Typescript基础之介绍</title>
-    <link href="https://www.wjnba.top/articles/2022082440cd5be30b97.html"/>
-    <id>https://www.wjnba.top/articles/2022082440cd5be30b97.html</id>
-    <published>2022-08-24T01:23:48.000Z</published>
-    <updated>2023-09-04T05:53:25.484Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="什么是TypeScript"><a href="#什么是TypeScript" class="headerlink" title="什么是TypeScript"></a>什么是TypeScript</h2><p><code>TypeScript</code> 是 <code>JavaScript</code> 的类型的超集，它可以编译成纯 <code>JavaScript</code>，主要提供了类型系统和对 <code>ES6</code> 的支持。编译出来的 <code>JavaScript</code> 可以运行在任何浏览器上。<code>TypeScript</code> 编译工具可以运行在任何服务器和任何系统上。<code>TypeScript</code> 是开源的。</p><span id="more"></span><h2 id="TypeScript的特点"><a href="#TypeScript的特点" class="headerlink" title="TypeScript的特点"></a>TypeScript的特点</h2><h3 id="1、编译型语言"><a href="#1、编译型语言" class="headerlink" title="1、编译型语言"></a>1、编译型语言</h3><p>直接编写的内容无法执行，需要通过编译工具编译成<code>JavaScript</code>。</p><h3 id="2、强类型的语言"><a href="#2、强类型的语言" class="headerlink" title="2、强类型的语言"></a>2、强类型的语言</h3><p><code>JavaScript</code>是动态类型的编程语言，所谓的动态类型，就是在编译时候时候才知道其数据类型是<code>Number</code> 还是<code>String</code>，它是弱类型语言；而<code>TypeScript</code>是静态类型的编程语言，所谓的静态类型就是编写的时候就知道其数据类型是什么，它是强类型语言。例如：</p><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str:<span class="built_in">string</span> = <span class="string">&#x27;hello word&#x27;</span></span><br></pre></td></tr></table></figure><p><code>str</code>这个变量从头到尾只能是<code>string</code>类型，如果将其他类型的值赋值给他就会抛出异常。</p><h3 id="3、真正面向对象的语言"><a href="#3、真正面向对象的语言" class="headerlink" title="3、真正面向对象的语言"></a>3、真正面向对象的语言</h3><p>面向对象：<strong>想进行执行某个事件，就去找事件对应的对象，把事情落实到对象身上</strong></p><p>在程序中一切皆是对象，对象包含<strong>属性</strong>和<strong>方法</strong></p><p>面向对象三大特征：<strong>封装、继承、多态</strong></p><ul><li>要想面向对象，操作对象，首先便要拥有对象</li><li>要创建对象，必须要先定义类，所谓的类可以理解为对象的模型，对象的种类</li><li>程序中可以根据类创建指定类型的对象</li><li>不同的类可以用来创建不同的对象</li></ul><h2 id="TypeScript的优势"><a href="#TypeScript的优势" class="headerlink" title="TypeScript的优势"></a>TypeScript的优势</h2><p>1、在开发过程中，就可以定位的错误的地方，方便我们检查错误。</p><p>2、<code>TypeScript</code>属于渐进式的编程语言，如果不懂其语法可以完全将其当做<code>JavaScript</code>来用。</p><p>3、减少了我们在开发过程中的不必要的类型检查。</p><p>4、静态类型的代码提示是要优于动态类型代码提示的。</p><p>5、在进行项目重构的时候会更加简单。</p><p>6、静态类型的代码语义化比动态类型更好，可读性更好。</p>]]></content>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;什么是TypeScript&quot;&gt;&lt;a href=&quot;#什么是TypeScript&quot; class=&quot;headerlink&quot; title=&quot;什么是TypeScript&quot;&gt;&lt;/a&gt;什么是TypeScript&lt;/h2&gt;&lt;p&gt;&lt;code&gt;TypeScript&lt;/code&gt; 是 &lt;code&gt;JavaScript&lt;/code&gt; 的类型的超集，它可以编译成纯 &lt;code&gt;JavaScript&lt;/code&gt;，主要提供了类型系统和对 &lt;code&gt;ES6&lt;/code&gt; 的支持。编译出来的 &lt;code&gt;JavaScript&lt;/code&gt; 可以运行在任何浏览器上。&lt;code&gt;TypeScript&lt;/code&gt; 编译工具可以运行在任何服务器和任何系统上。&lt;code&gt;TypeScript&lt;/code&gt; 是开源的。&lt;/p&gt;</summary>
     
     
     
