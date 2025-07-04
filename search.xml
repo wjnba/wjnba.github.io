@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>关于this的理解</title>
+      <link href="/articles/202507040a0f7abfb535.html"/>
+      <url>/articles/202507040a0f7abfb535.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="什么是this？"><a href="#什么是this？" class="headerlink" title="什么是this？"></a>什么是this？</h2><p><strong>定义：调用函数时，call后面的第一个值</strong></p><h2 id="如何找到this？"><a href="#如何找到this？" class="headerlink" title="如何找到this？"></a>如何找到this？</h2><p>由定义可知，this就是call后面的第一个值，只要确定了call后面的值，即可找到this。换句话说，只需要<strong>把函数调用改成带有call的调用即可</strong></p><h2 id="函数调用"><a href="#函数调用" class="headerlink" title="函数调用"></a>函数调用</h2><p>JS（ES5）里面有三种函数调用形式：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">func(p1, p2) </span><br><span class="line">obj.child.method(p1, p2)</span><br><span class="line">func.call(context, p1, p2)</span><br></pre></td></tr></table></figure><p>一般，初学者都知道前两种形式，而且认为前两种形式「优于」第三种形式。</p><p>从看到这篇文章起，你一定要记住，第三种调用形式，才是正常调用形式：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">func.call(context, p1, p2)</span><br></pre></td></tr></table></figure><p>其他两种都是语法糖，可以等价地变为 call 形式：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">func(p1, p2) 等价于</span><br><span class="line">func.call(<span class="literal">undefined</span>, p1, p2)</span><br><span class="line"></span><br><span class="line">obj.child.method(p1, p2) 等价于</span><br><span class="line">obj.child.method.call(obj.child, p1, p2)</span><br></pre></td></tr></table></figure><p>请记下来。（我们称此代码为「转换代码」，方便下文引用）</p><p>至此我们的函数调用只有一种形式：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">func.call(context, p1, p2)</span><br></pre></td></tr></table></figure><p>举个例子吧</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">    <span class="attr">foo</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="built_in">this</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> bar = obj.foo</span><br><span class="line">obj.foo() <span class="comment">// 打印出的 this 是 obj</span></span><br><span class="line">bar() <span class="comment">// 打印出的 this 是 window</span></span><br></pre></td></tr></table></figure><p>可以理解为</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">obj.foo()</span><br><span class="line"><span class="comment">//等价于</span></span><br><span class="line">obj.foo.call(obj)</span><br><span class="line"><span class="comment">//因此this是obj</span></span><br><span class="line"></span><br><span class="line">bar()</span><br><span class="line"><span class="comment">//等价于</span></span><br><span class="line">bar.call(<span class="literal">undefined</span>)</span><br><span class="line"><span class="comment">//因此this是window</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//当传入的上下文是null或undefined时，浏览器默认this就是window，严格状态下是undefined</span></span><br></pre></td></tr></table></figure><h2 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h2><p>箭头函数里并没有 this，如果你在箭头函数里看到 this，你直接把它当作箭头函数外面的 this 即可。外面的 this 是什么，箭头函数里面的 this 就还是什么，因为箭头函数本身不支持 this。</p><p>有人说「箭头函数里面的 this 指向箭头函数外面的 this」，<strong>这很傻</strong>，因为箭头函数内外 this 就是同一个东西，并不存在什么指向不指向。</p><p><strong>贴两个精髓文章</strong></p><p><a href="https://mp.weixin.qq.com/s?__biz=MjM5MDA2MTI1MA==&amp;mid=2649110199&amp;idx=2&amp;sn=253649dc5f721e055979f1b9c0976cad&amp;chksm=be58111a892f980c1de5c817fe170160cd2728ba40ef8925606a3af2595b3a6b1554a9451cc5&amp;scene=27">一文搞懂 this、apply、call、bind</a></p><p><a href="https://www.cnblogs.com/BUBU-Sourire/p/11299447.html">关于this的理解</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 深入浅出js </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> javascript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Sourcetree GIt工作流使用及分支开发模式</title>
       <link href="/articles/20241022bb4ed2208a4c.html"/>
       <url>/articles/20241022bb4ed2208a4c.html</url>
