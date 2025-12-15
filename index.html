@@ -1,0 +1,633 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>wjnba的博客 - 君子以坦荡立于世间，必将步步生花，一路繁华</title><meta name="keywords" content="wjnba,www.wjnba.top,wjnba的博客,vue,前端开发,码农,程序员,前端,vue,js,css,个人博客,html,h5,小程序,微信小程序,钉钉小程序,web前端,app,web app,IT,开发者,程序猿,编程,代码,开源,IT网站,前端基础知识,HTML,CSS,JavaScript,jQuery,Ajax,Bootstrap"><meta name="author" content="wjnba"><meta name="copyright" content="wjnba"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="vue,前端,IT,技术">
+<meta property="og:type" content="website">
+<meta property="og:title" content="wjnba的博客">
+<meta property="og:url" content="https://www.wjnba.top/index.html">
+<meta property="og:site_name" content="wjnba的博客">
+<meta property="og:description" content="vue,前端,IT,技术">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://q1.qlogo.cn/g?b=qq&nk=1746040223&s=100">
+<meta property="article:author" content="wjnba">
+<meta property="article:tag" content="wjnba,www.wjnba.top,wjnba的博客,vue,前端开发,码农,程序员,前端,vue,js,css,个人博客,html,h5,小程序,微信小程序,钉钉小程序,web前端,app,web app,IT,开发者,程序猿,编程,代码,开源,IT网站,前端基础知识,HTML,CSS,JavaScript,jQuery,Ajax,Bootstrap">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://q1.qlogo.cn/g?b=qq&nk=1746040223&s=100"><link rel="shortcut icon" href="https://q1.qlogo.cn/g?b=qq&nk=1746040223&s=100"><link rel="canonical" href="https://www.wjnba.top/"><script>(function() {
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    } else {
+      bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();</script><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="/pluginsSrc/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="/pluginsSrc/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="/pluginsSrc/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: {"limitDay":30,"position":"top","messagePrev":"这篇文章已经发表了","messageNext":"天了，其中某些内容可能已经过时。"},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: wjnba","link":"链接: ","source":"来源: wjnba的博客","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#6f42c1","bgDark":"#6f42c1","position":"top-left"},
+  source: {
+    justifiedGallery: {
+      js: '/pluginsSrc/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: '/pluginsSrc/flickr-justified-gallery/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'wjnba的博客',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2025-12-15 11:48:29'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/custom.css"><link rel="stylesheet" href="/css/function.min.css"><meta name="baidu-site-verification" content="codeva-pEF91p4v9G" /><!-- hexo injector head_end start --><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css" media="defer" onload="this.media='all'"><script src="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js"></script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="wjnba的博客" type="application/atom+xml">
+</head><body><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><div class="loading-img"></div><div class="loading-image-dot"></div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://q1.qlogo.cn/g?b=qq&amp;nk=1746040223&amp;s=100" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">38</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">28</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">15</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-book"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 图册</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://hot.wjnba.top/#/"><i class="fa-fw fa-solid fa-fire"></i><span> 热榜</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-user-group"></i><span> 社交</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/comments/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></li><li><a class="site-page child" href="/fcircle/"><i class="fa-fw fas fa-wifi"></i><span> 朋友圈</span></a></li><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/collections/"><i class="fa-fw fas fa-infinity"></i><span> 网址收藏</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('https://pic.wjnba.top/img/202404/20240403144016.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">wjnba的博客</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-book"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 图册</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://hot.wjnba.top/#/"><i class="fa-fw fa-solid fa-fire"></i><span> 热榜</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-user-group"></i><span> 社交</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/comments/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></li><li><a class="site-page child" href="/fcircle/"><i class="fa-fw fas fa-wifi"></i><span> 朋友圈</span></a></li><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/collections/"><i class="fa-fw fas fa-infinity"></i><span> 网址收藏</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">wjnba的博客</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/wjnba" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:1746040223@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="Rss"><i class="fas fa-rss"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/articles/202507040a0f7abfb535.html" title="关于this的理解"><img class="post_bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic.wjnba.top/img/blog-cover-39.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="关于this的理解"></a></div><div class="recent-post-info"><a class="article-title" href="/articles/202507040a0f7abfb535.html" title="关于this的理解">关于this的理解</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-07-04T07:00:30.000Z" title="发表于 2025-07-04 15:00:30">2025-07-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BAjs/">深入浅出js</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a class="twikoo-count" href="/articles/202507040a0f7abfb535.html#post-comment"><i class="fa-solid fa-spinner fa-spin"></i></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">什么是this？定义：调用函数时，call后面的第一个值
+如何找到this？由定义可知，this就是call后面的第一个值，只要确定了call后面的值，即可找到this。换句话说，只需要把函数调用改成带有call的调用即可
+函数调用JS（ES5）里面有三种函数调用形式：
+123func(p1, p2) obj.child.method(p1, p2)func.call(context, p1, p2)
+一般，初学者都知道前两种形式，而且认为前两种形式「优于」第三种形式。
+从看到这篇文章起，你一定要记住，第三种调用形式，才是正常调用形式：
+1func.call(context, p1, p2)
+其他两种都是语法糖，可以等价地变为 call 形式：
+12345func(p1, p2) 等价于func.call(undefined, p1, p2)obj.child.method(p1, p2) 等价于obj.child.method.call(obj.child, p1, p2)
+请记下来。（我们称此代码为「转换代码」，方便下文引用）
+至此我们的函数调用只有一种形式：
+1func.call ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/articles/20241022bb4ed2208a4c.html" title="Sourcetree GIt工作流使用及分支开发模式"><img class="post_bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic.wjnba.top/img/blog-cover-38.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Sourcetree GIt工作流使用及分支开发模式"></a></div><div class="recent-post-info"><a class="article-title" href="/articles/20241022bb4ed2208a4c.html" title="Sourcetree GIt工作流使用及分支开发模式">Sourcetree GIt工作流使用及分支开发模式</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-10-22T08:36:27.000Z" title="发表于 2024-10-22 16:36:27">2024-10-22</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/">代码规范</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a class="twikoo-count" href="/articles/20241022bb4ed2208a4c.html#post-comment"><i class="fa-solid fa-spinner fa-spin"></i></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">
+一般的企业级开发分支共有5种类型
+master，最终发布版本，整个项目中有且只有一个。
+develop，项目的开发分支，原则上项目中有且只有一个。
+feature，功能分支，用于开发一个新的功能。
+release，预发布版本，介于develop和master之间的一个版本，用于测试。
+hotfix，修复补丁，用于修复master上的bug，直接作用于master。
+
+SourceTree一般开发模式：1、开发任务都是在develop分支上完成的，当开发中需要增加一个新的功能时，可新建feature分支，用于增加新功能，并且不影响开发中的develop源码，当新功能增加完成后，完成feature分支，将新功能合并到develop中，更新develop上的代码。操作：
+①分支选择develop，点击Git工作流，选择“建立新的功能”，以功能命名分支，并把生成的分支推到远程仓库，如下图：
+
+
+②完成功能开发后，将当前分支指向该分支（如上图“首页”分支），点击“Git工作流”，选择“完成功能”，将新功能合并到develop中，更新develop上的代码，如下图：
+
+
+2、当开发到一定阶段，可 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/articles/202410188aafe27d2b6b.html" title="正则表达式学习"><img class="post_bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic.wjnba.top/img/blog-cover-37.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="正则表达式学习"></a></div><div class="recent-post-info"><a class="article-title" href="/articles/202410188aafe27d2b6b.html" title="正则表达式学习">正则表达式学习</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-10-18T08:06:49.000Z" title="发表于 2024-10-18 16:06:49">2024-10-18</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">正则表达式</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a class="twikoo-count" href="/articles/202410188aafe27d2b6b.html#post-comment"><i class="fa-solid fa-spinner fa-spin"></i></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">
+1. 基本匹配正则表达式只是我们用于在文本中检索字母和数字的模式。例如正则表达式 cat，表示: 字母 c 后面跟着一个字母 a，再后面跟着一个字母 t。
+1&quot;cat&quot; =&gt; The cat sat on the mat
+正则表达式 123 会匹配字符串 “123”。通过将正则表达式中的每个字符逐个与要匹配的字符串中的每个字符进行比较，来完成正则匹配。 正则表达式通常区分大小写，因此正则表达式 Cat 与字符串 “cat” 不匹配。
+1&quot;Cat&quot; =&gt; The cat sat on the Cat
+2. 元字符元字符是正则表达式的基本组成元素。元字符在这里跟它通常表达的意思不一样，而是以某种特殊的含义去解释。有些元字符写在方括号内的时候有特殊含义。 元字符如下:
+
+
+
+
+元字符
+描述
+
+
+
+
+.
+匹配除换行符以外的任意字符。
+
+
+[ ]
+字符类，匹配方括号中包含的任意字符。
+
+
+ 
+否定字符类。匹配方括号中不包含的任意字符
+
+
+*
+匹配前面的子表达式零次或多次
+
+
++
+匹配前面的子表达式一次或多次
+
+
+?
+匹配前面的子表达式零次或一 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/articles/20241011497ebe003dad.html" title="vue3常用的API"><img class="post_bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic.wjnba.top/img/blog-cover-36.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vue3常用的API"></a></div><div class="recent-post-info"><a class="article-title" href="/articles/20241011497ebe003dad.html" title="vue3常用的API">vue3常用的API</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-10-11T02:47:13.000Z" title="发表于 2024-10-11 10:47:13">2024-10-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/vue3/">vue3</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a class="twikoo-count" href="/articles/20241011497ebe003dad.html#post-comment"><i class="fa-solid fa-spinner fa-spin"></i></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">
+Vue2每次都把整个Vue导入，例如Vue2的 main.js 文件中的代码
+12345678import Vue from &#x27;vue&#x27;import App from &#x27;./App.vue&#x27;Vue.config.productionTip = falsenew Vue(&#123;  render: h =&gt; h(App)&#125;).$mount(&#x27;#app&#x27;)
+但很明显我们的项目中不可能用到Vue所有的API，因此很多模块其实是没有用的
+那么在Vue3中，对外暴露了很多的API供开发者使用，我们可以根据自己的需求，将所需要的API从Vue中导入。例如 main.js 中的代码
+1234import &#123; createApp &#125; from &#x27;vue&#x27;;import App from &#x27;./App.vue&#x27;createApp(App).mount(&#x27;#app&#x27;)
+利用了 import 和 export 的导入导出语法，实现了按需打包模块的功 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/articles/2024061746f272d2cf71.html" title="vue3知识整理"><img class="post_bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic.wjnba.top/img/blog-cover-34.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vue3知识整理"></a></div><div class="recent-post-info"><a class="article-title" href="/articles/2024061746f272d2cf71.html" title="vue3知识整理">vue3知识整理</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-06-17T02:42:22.000Z" title="发表于 2024-06-17 10:42:22">2024-06-17</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/vue3/">vue3</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a class="twikoo-count" href="/articles/2024061746f272d2cf71.html#post-comment"><i class="fa-solid fa-spinner fa-spin"></i></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">Vue3
+1.Vue3 简介
+2020 年 9 月 18 日，Vue.js 发布 3.0 版本，代号：One Piece（海贼王）
+耗时 2 年多、2600+次提交、30+个 RFC、600+次 PR、99 位贡献者
+github 上的 tags 地址：https://github.com/vuejs/vue-next/releases/tag/v3.0.0
+
+2.Vue3 带来了什么1.性能的提升
+打包大小减少 41%
+
+初次渲染快 55%, 更新渲染快 133%
+
+内存减少 54%
+…
+
+
+2.源码的升级
+使用 Proxy 代替 defineProperty 实现响应式
+
+重写虚拟 DOM 的实现和 Tree-Shaking
+…
+
+
+3.拥抱 TypeScript
+Vue3 可以更好的支持 TypeScript
+
+4.新的特性
+Composition API（组合 API）
+setup 配置
+ref 与 reactive
+watch 与 watchEffect
+provide 与 inject
+…
+
+
+新的内置组件
+Fragment
+Teleport
+Suspense
+
+
+其他改变 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/articles/20240612720b6383efbf.html" title="vue大屏适配方案"><img class="post_bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic.wjnba.top/img/blog-cover-33.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vue大屏适配方案"></a></div><div class="recent-post-info"><a class="article-title" href="/articles/20240612720b6383efbf.html" title="vue大屏适配方案">vue大屏适配方案</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-06-12T06:46:53.000Z" title="发表于 2024-06-12 14:46:53">2024-06-12</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/vue%E7%BB%84%E4%BB%B6/">vue组件</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a class="twikoo-count" href="/articles/20240612720b6383efbf.html#post-comment"><i class="fa-solid fa-spinner fa-spin"></i></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">
+
+在做可视化大屏项目难免会考虑到屏幕适配的难题，如果有一个适配各种屏幕的基础容器组件处理这个事情，我们就可以放心写业务，下面介绍在vue中如何通过锁定宽高比的方式来进行屏幕适配。
+
+组件特点1.自动监听浏览器窗口变化,动态计算出高宽比,无视页面放大缩小
+2.适用于各种屏幕,常用作项目最外层基础容器
+3.突破浏览器中 font-size 最小 12px 限制
+组件实现新增LargeScreenContainer.vue文件，在文件里面创建一个外层包裹容器，根据屏幕的可视区尺寸与设计稿尺寸得到一个宽高缩放比例，根据比例去对外层包裹容器进行缩放，以适应屏幕
+1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798991001011021031041051061071081091 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/articles/20240416e2cba8f4e7fb.html" title="vue中使用vue-lazyload实现图片的懒加载"><img class="post_bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic.wjnba.top/img/blog-cover-32.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vue中使用vue-lazyload实现图片的懒加载"></a></div><div class="recent-post-info"><a class="article-title" href="/articles/20240416e2cba8f4e7fb.html" title="vue中使用vue-lazyload实现图片的懒加载">vue中使用vue-lazyload实现图片的懒加载</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-04-16T09:24:17.000Z" title="发表于 2024-04-16 17:24:17">2024-04-16</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/vue%E6%8F%92%E4%BB%B6/">vue插件</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a class="twikoo-count" href="/articles/20240416e2cba8f4e7fb.html#post-comment"><i class="fa-solid fa-spinner fa-spin"></i></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">
+
+前面在图片懒加载一文中讲到什么是图片懒加载和用js怎么实现懒加载，本文记录一下图片懒加载插件 vue-lazyload的使用。
+
+一、安装依赖包npm1npm i vue-lazyload -S
+yarn1yarn add vue-lazyload
+二、全局注册插件1234567891011// 引入插件import VueLazyload from &#x27;vue-lazyload&#x27;// 注册插件const loadimage = require(&#x27;./assets/loading.gif&#x27;)const errorimage = require(&#x27;./assets/error.gif&#x27;)Vue.use(VueLazyload, &#123;  preLoad: 1.3,  error: errorimage,  loading: loadimage,  attempt: 1&#125;)
+配置项参数说明：
+
+
+
+
+键
+描述
+默认值
+选项
+
+
+
+
+preLoad
+表示lazyload的元素,距离页面底部距离的百分比.计算值为(p ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/articles/202404033e401561b4c9.html" title="JS命名规范"><img class="post_bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic.wjnba.top/img/blog-cover-31.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="JS命名规范"></a></div><div class="recent-post-info"><a class="article-title" href="/articles/202404033e401561b4c9.html" title="JS命名规范">JS命名规范</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-04-03T03:21:51.000Z" title="发表于 2024-04-03 11:21:51">2024-04-03</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/">代码规范</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a class="twikoo-count" href="/articles/202404033e401561b4c9.html#post-comment"><i class="fa-solid fa-spinner fa-spin"></i></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">
+
+js命名应遵循 简洁、语义化 的原则
+
+一、变量命名方法: 小驼峰式命名法命名规范：前缀为形容词 （函数前缀为动词, 以此来区分函数和变量）
+123456//好的命名方式let maxCount = 10;let tableTitle = &#x27;啦啦啦&#x27;;//不好的命名方式let setConut = 10;let getTitle = &#x27;啦啦啦&#x27;;
+临时变量1：作用域不大临时变量可以简写，比如：str，num，bol，obj，fun，arr。2：循环变量可以简写，比如：i，j，k等。
+
+s：表示字符串。例如：sName，sHtml；
+n：表示数字。例如：nPage，nTotal；
+b：表示逻辑。例如：bChecked，bHasLogin；
+a：表示数组。例如：aList，aGroup；
+r：表示正则表达式。例如：rDomain，rEmail；
+f：表示函数。例如：fGetHtml，fInit；
+o：表示以上未涉及到的其他对象，例如：oButton，oDate；
+g：表示全局变量，例如：gUserName，gLoginTime；
+
+二、常量
+ 某 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/articles/20240402d6b5aa8c7fec.html" title="CSS媒体查询"><img class="post_bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic.wjnba.top/img/blog-cover-30.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="CSS媒体查询"></a></div><div class="recent-post-info"><a class="article-title" href="/articles/20240402d6b5aa8c7fec.html" title="CSS媒体查询">CSS媒体查询</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-04-02T02:18:25.000Z" title="发表于 2024-04-02 10:18:25">2024-04-02</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BAcss/">深入浅出css</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a class="twikoo-count" href="/articles/20240402d6b5aa8c7fec.html#post-comment"><i class="fa-solid fa-spinner fa-spin"></i></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">
+媒体查询（Media Queries）
+媒体查询（Media Queries）是 CSS3 中的一个特性，它允许你根据设备的特性（如宽度、高度、颜色等）来应用不同的 CSS 样式。这使得开发者能够为不同的设备（如桌面电脑、平板电脑、手机等）或同一设备的不同状态（如横屏或竖屏）创建特定的布局和样式。
+
+媒体查询由两部分组成：媒体类型（Media Type）和媒体特性（Media Features）。
+媒体类型：描述了设备的一般类别，如 all（所有设备）、screen（电脑屏幕、平板电脑、智能手机等）、print（打印机和打印预览）等。
+媒体特性：描述了设备的具体特性，如 width（视口宽度）、height（视口高度）、color（设备颜色位数）等。
+媒体查询的基本语法如下：
+1234css@media mediaType and (mediaFeature1: value1) and (mediaFeature2: value2) &#123;      /* CSS 规则 */  &#125;
+例如，如果你想为宽度小于 768px 的设备设置特定的样式，你可以这样写：
+12345 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/articles/2023083076b3a1d0ac73.html" title="uniapp安卓手机无线真机调试"><img class="post_bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic.wjnba.top/img/blog-cover-29.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="uniapp安卓手机无线真机调试"></a></div><div class="recent-post-info"><a class="article-title" href="/articles/2023083076b3a1d0ac73.html" title="uniapp安卓手机无线真机调试">uniapp安卓手机无线真机调试</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-08-30T02:12:00.000Z" title="发表于 2023-08-30 10:12:00">2023-08-30</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/uniapp/">uniapp</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a class="twikoo-count" href="/articles/2023083076b3a1d0ac73.html#post-comment"><i class="fa-solid fa-spinner fa-spin"></i></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">
+从 Android 11 开始USB调试新增了无线调试功能，需要搭配 adb 30.0.0 及以上版本使用，请确认你的系统和adb是否符合要求。
+一、下载adbadb下载地址： SDK Platform Tools版本说明
+选择对应的系统版本，我是windows系统，所以选择如下：
+
+下载解压完之后放到HBuilderX的adbs文件夹里 重命名为34.0.0 
+
+二、在手机上打开无线调试手机连上wifi，保证手机和电脑在同一局域网，进入开发者选项开启无线调试
+
+
+三、使用配对码配对1、手机上点击使用配对码配对设备，查看配对码和ip地址：
+2、进入34.0.0 文件夹，并打开cmd窗口：
+使用adb pair命令和手机配对
+
+
+
+
+继续使用adb connect命令连接设备
+
+
+
+四、验证
+</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/#content-inner">4</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://q1.qlogo.cn/g?b=qq&amp;nk=1746040223&amp;s=100" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">wjnba</div><div class="author-info__description">vue,前端,IT,技术</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">38</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">28</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">15</div></a></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/wjnba" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:1746040223@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="Rss"><i class="fas fa-rss"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div id="welcome-info"></div><div class="announcement_content">如果阅读过程中遇到了问题，请及时评论或者留言，看到了会在第一时间给出回复。</div></div><div class="sticky_layout"><div class="card-widget" style="overflow: initial;"><div class="wj-video-container"><section id="wj-main"><video id="wj-player" src="http://api.yujn.cn/api/zzxjj.php" controls="controls" muted="muted" autoplay="autoplay"></video></section></div><div class="wj-button-container"><button id="wj-switch">连续: 开</button><button id="wj-next1">换一个</button><button id="wj-changeSource">换源</button><div id="wj-sourceSelectContainer"><select id="wj-sourceSelect"><option value="http://api.yujn.cn/api/zzxjj.php" title="http://api.yujn.cn/api/zzxjj.php">线路0</option><option value="https://jx.iqfk.top/api/sjsp.php" title="https://jx.iqfk.top/api/sjsp.php">线路1</option><option value="https://www.cunshao.com/666666/api/web.php" title="https://www.cunshao.com/666666/api/web.php">线路2</option><option value="https://www.cunshao.com/666666/api/pc.php" title="https://www.cunshao.com/666666/api/pc.php">线路3</option><option value="https://api.qoc.cc/api/xjj" title="https://api.qoc.cc/api/xjj">线路4</option><option value="http://v.nrzj.vip/video.php" title="http://v.nrzj.vip/video.php">线路5</option><option value="http://api.yujn.cn/api/xjj.php" title="http://api.yujn.cn/api/xjj.php">线路6</option></select><button id="wj-applySource" style="width: 100%;padding: 3px 0;margin-top: 4px;">应用</button></div></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/articles/202507040a0f7abfb535.html" title="关于this的理解"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic.wjnba.top/img/blog-cover-39.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="关于this的理解"/></a><div class="content"><a class="title" href="/articles/202507040a0f7abfb535.html" title="关于this的理解">关于this的理解</a><time datetime="2025-07-04T07:00:30.000Z" title="发表于 2025-07-04 15:00:30">2025-07-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/20241022bb4ed2208a4c.html" title="Sourcetree GIt工作流使用及分支开发模式"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic.wjnba.top/img/blog-cover-38.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Sourcetree GIt工作流使用及分支开发模式"/></a><div class="content"><a class="title" href="/articles/20241022bb4ed2208a4c.html" title="Sourcetree GIt工作流使用及分支开发模式">Sourcetree GIt工作流使用及分支开发模式</a><time datetime="2024-10-22T08:36:27.000Z" title="发表于 2024-10-22 16:36:27">2024-10-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/202410188aafe27d2b6b.html" title="正则表达式学习"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic.wjnba.top/img/blog-cover-37.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="正则表达式学习"/></a><div class="content"><a class="title" href="/articles/202410188aafe27d2b6b.html" title="正则表达式学习">正则表达式学习</a><time datetime="2024-10-18T08:06:49.000Z" title="发表于 2024-10-18 16:06:49">2024-10-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/20241011497ebe003dad.html" title="vue3常用的API"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic.wjnba.top/img/blog-cover-36.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vue3常用的API"/></a><div class="content"><a class="title" href="/articles/20241011497ebe003dad.html" title="vue3常用的API">vue3常用的API</a><time datetime="2024-10-11T02:47:13.000Z" title="发表于 2024-10-11 10:47:13">2024-10-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/2024061746f272d2cf71.html" title="vue3知识整理"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic.wjnba.top/img/blog-cover-34.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vue3知识整理"/></a><div class="content"><a class="title" href="/articles/2024061746f272d2cf71.html" title="vue3知识整理">vue3知识整理</a><time datetime="2024-06-17T02:42:22.000Z" title="发表于 2024-06-17 10:42:22">2024-06-17</time></div></div></div></div><div class="card-widget" id="card-newest-comments"><div class="item-headline"><i class="fas fa-comment-dots"></i><span>最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            <a class="card-more-btn" href="/categories/" title="查看更多">
+    <i class="fas fa-angle-right"></i></a>
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/HTTP%E8%AF%B7%E6%B1%82/"><span class="card-category-list-name">HTTP请求</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Hexo-Gitee/"><span class="card-category-list-name">Hexo+Gitee</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Typescript%E5%9F%BA%E7%A1%80/"><span class="card-category-list-name">Typescript基础</span><span class="card-category-list-count">6</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/node/"><span class="card-category-list-name">node</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/uniapp/"><span class="card-category-list-name">uniapp</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/vue3/"><span class="card-category-list-name">vue3</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/vue%E6%8F%92%E4%BB%B6/"><span class="card-category-list-name">vue插件</span><span class="card-category-list-count">5</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/vue%E7%BB%84%E4%BB%B6/"><span class="card-category-list-name">vue组件</span><span class="card-category-list-count">2</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">个人博客<span class="tagsPageCount">4</span></a><a href="/tags/Hexo/">Hexo<span class="tagsPageCount">4</span></a><a href="/tags/Gitee-Pages/">Gitee Pages<span class="tagsPageCount">3</span></a><a href="/tags/css/">css<span class="tagsPageCount">3</span></a><a href="/tags/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80/">响应式布局<span class="tagsPageCount">1</span></a><a href="/tags/Git/">Git<span class="tagsPageCount">1</span></a><a href="/tags/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/">代码规范<span class="tagsPageCount">3</span></a><a href="/tags/HTTP%E8%AF%B7%E6%B1%82/">HTTP请求<span class="tagsPageCount">1</span></a><a href="/tags/javascript/">javascript<span class="tagsPageCount">9</span></a><a href="/tags/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">数据类型<span class="tagsPageCount">2</span></a><a href="/tags/Typescript/">Typescript<span class="tagsPageCount">6</span></a><a href="/tags/vue/">vue<span class="tagsPageCount">11</span></a><a href="/tags/excel/">excel<span class="tagsPageCount">1</span></a><a href="/tags/xlsx/">xlsx<span class="tagsPageCount">1</span></a><a href="/tags/%E8%BD%AF%E4%BB%B6%E7%A0%B4%E8%A7%A3/">软件破解<span class="tagsPageCount">1</span></a><a href="/tags/xmind/">xmind<span class="tagsPageCount">1</span></a><a href="/tags/%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE%E5%B7%A5%E5%85%B7/">思维导图工具<span class="tagsPageCount">1</span></a><a href="/tags/node/">node<span class="tagsPageCount">1</span></a><a href="/tags/%E5%B1%85%E4%B8%AD/">居中<span class="tagsPageCount">1</span></a><a href="/tags/uniapp/">uniapp<span class="tagsPageCount">1</span></a><a href="/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/">性能优化<span class="tagsPageCount">2</span></a><a href="/tags/wangeditor/">wangeditor<span class="tagsPageCount">1</span></a><a href="/tags/%E5%89%8D%E7%AB%AF%E9%80%82%E9%85%8D/">前端适配<span class="tagsPageCount">2</span></a><a href="/tags/butterfly/">butterfly<span class="tagsPageCount">1</span></a><a href="/tags/%E5%9C%B0%E5%9B%BE/">地图<span class="tagsPageCount">1</span></a><a href="/tags/postcss-px-to-viewport/">postcss-px-to-viewport<span class="tagsPageCount">1</span></a><a href="/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">正则表达式<span class="tagsPageCount">1</span></a><a href="/tags/%E8%B0%B7%E6%AD%8C%E6%B5%8F%E8%A7%88%E5%99%A8/">谷歌浏览器<span class="tagsPageCount">1</span></a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/"><span class="card-archive-list-date">2025</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/"><span class="card-archive-list-date">2024</span><span class="card-archive-list-count">8</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/"><span class="card-archive-list-date">2023</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/"><span class="card-archive-list-date">2022</span><span class="card-archive-list-count">16</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/"><span class="card-archive-list-date">2021</span><span class="card-archive-list-count">10</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">38</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2021-11-12T00:00:00.000Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">59.5k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-12-15T03:48:28.880Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://pic.wjnba.top/img/202404/20240403144016.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2021 - 2025 By wjnba</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="chat_btn" type="button" title="聊天"><i class="fas fa-sms"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="/pluginsSrc/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="/pluginsSrc/instant.page/instantpage.js" type="module"></script><script src="/pluginsSrc/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="/pluginsSrc/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('/pluginsSrc/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>(() => { 
+  const getCommentUrl = () => {
+    const eleGroup = document.querySelectorAll('#recent-posts .article-title')
+    let urlArray = []
+    eleGroup.forEach(i=>{
+      urlArray.push(i.getAttribute('href'))
+    })
+    return urlArray
+  }
+
+  const getCount = () => {
+    const runTwikoo = () => {
+      twikoo.getCommentsCount({
+        envId: 'https://twikoo.wjnba.top/',
+        region: '',
+        urls: getCommentUrl(),
+        includeReply: false
+      }).then(function (res) {
+        document.querySelectorAll('#recent-posts .twikoo-count').forEach((item,index) => {
+          item.innerText = res[index].count
+        })
+      }).catch(function (err) {
+        console.log(err)
+      })
+    }
+
+      if (typeof twikoo === 'object') {
+        runTwikoo()
+      } else {
+        getScript('/pluginsSrc/twikoo/dist/twikoo.all.min.js').then(runTwikoo)
+      }
+  }
+
+  window.pjax ? getCount() : window.addEventListener('load', getCount)
+
+})()</script><script>function subtitleType () {
+  if (true) { 
+    window.typed = new Typed("#subtitle", {
+      strings: ["君子以坦荡立于世间，必将步步生花，一路繁华"],
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: false,
+      backSpeed: 50
+    })
+  } else {
+    document.getElementById("subtitle").innerHTML = '君子以坦荡立于世间，必将步步生花，一路繁华'
+  }
+}
+
+if (true) {
+  if (typeof Typed === 'function') {
+    subtitleType()
+  } else {
+    getScript('/pluginsSrc/typed.js/lib/typed.min.js').then(subtitleType)
+  }
+} else {
+  subtitleType()
+}</script></div><script>window.addEventListener('load', () => {
+  const changeContent = (content) => {
+    if (content === '') return content
+
+    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
+    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[链接]') // replace url
+    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[代码]') // replace code
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
+
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
+
+  const getComment = () => {
+    const runTwikoo = () => {
+      twikoo.getRecentComments({
+        envId: 'https://twikoo.wjnba.top/',
+        region: '',
+        pageSize: 6,
+        includeReply: true
+      }).then(function (res) {
+        const twikooArray = res.map(e => {
+          return {
+            'content': changeContent(e.comment),
+            'avatar': e.avatar,
+            'nick': e.nick,
+            'url': e.url + '#' + e.id,
+            'date': new Date(e.created).toISOString()
+          }
+        })
+
+        saveToLocal.set('twikoo-newest-comments', JSON.stringify(twikooArray), 10/(60*24))
+        generateHtml(twikooArray)
+      }).catch(function (err) {
+        const $dom = document.querySelector('#card-newest-comments .aside-list')
+        $dom.innerHTML= "无法获取评论，请确认相关配置是否正确"
+      })
+    }
+
+    if (typeof twikoo === 'object') {
+      runTwikoo()
+    } else {
+      getScript('/pluginsSrc/twikoo/dist/twikoo.all.min.js').then(runTwikoo)
+    }
+  }
+
+  const generateHtml = array => {
+    let result = ''
+
+    if (array.length) {
+      for (let i = 0; i < array.length; i++) {
+        result += '<div class=\'aside-list-item\'>'
+
+        if (true) {
+          const name = 'data-lazy-src'
+          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'></a>`
+        }
+        
+        result += `<div class='content'>
+        <a class='comment' href='${array[i].url}' title='${array[i].content}'>${array[i].content}</a>
+        <div class='name'><span>${array[i].nick} / </span><time datetime="${array[i].date}">${btf.diffDate(array[i].date, true)}</time></div>
+        </div></div>`
+      }
+    } else {
+      result += '没有评论'
+    }
+
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom.innerHTML= result
+    window.lazyLoadInstance && window.lazyLoadInstance.update()
+    window.pjax && window.pjax.refresh($dom)
+  }
+
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('twikoo-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getComment()
+      }
+    }
+  }
+
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script><script src="/js/jquery.min.js"></script><script async data-pjax src="/js/txmap.js"></script><script async data-pjax src="/js/randomVideo.js"></script><script src="/pluginsSrc/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-heart" src="/pluginsSrc/butterfly-extsrc/dist/click-heart.min.js" async="async" mobile="false"></script><script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/e96e74c4.js","daovoice")
+</script><script>var isChatBtn = true
+daovoice('init', {
+  app_id: 'e96e74c4',},{
+  launcher: { 
+     disableLauncherIcon: isChatBtn // 悬浮 ICON 是否显示
+  },
+});
+daovoice('update');
+
+if (isChatBtn) {
+  var chatBtnFn = () => {
+    var chatBtn = document.getElementById("chat_btn")
+    chatBtn.addEventListener("click", function(){
+      daovoice('show')
+    });
+  }
+  chatBtnFn()
+} else {
+  if (true) {
+    function chatBtnHide () {
+      daovoice('update', {},{
+        launcher: { 
+        disableLauncherIcon: true // 悬浮 ICON 是否显示
+        },
+      });
+    }
+    function chatBtnShow () {
+      daovoice('update', {},{
+        launcher: { 
+        disableLauncherIcon: false // 悬浮 ICON 是否显示
+        },
+      });
+    }
+  }
+}</script><script src="/pluginsSrc/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"]):not([href="/fcircle/"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  typeof preloader === 'object' && preloader.initLoading()
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --><script defer src="https://npm.elemecdn.com/jquery@latest/dist/jquery.min.js"></script><script defer src="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/issues.js"></script><script async src="//at.alicdn.com/t/font_2032782_8d5kxvn09md.js"></script><!-- hexo injector body_end end --></body></html>

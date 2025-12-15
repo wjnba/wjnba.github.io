@@ -1,0 +1,14 @@
+# 允许所有用户代理的浏览器爬虫进行访问（爬取数据）
+User-agent: *
+Allow: /
+
+# 不允许访问的内容
+Disallow: /fonts/
+Disallow: /img/
+Disallow: /js/
+Disallow: /css/
+Disallow: /*.js
+Disallow: /*.css
+
+Sitemap: https://www.wjnba.top/sitemap.xml
+Sitemap: https://www.wjnba.top/baidusitemap.xml
