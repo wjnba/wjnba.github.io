@@ -1,0 +1,593 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>CSS 命名规范 - BEM | wjnba的博客</title><meta name="keywords" content="CSS, 命名规范, BEM"><meta name="author" content="wjnba"><meta name="copyright" content="wjnba"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="一、BEM基础介绍 定义：BEM（Block Element Modifier）是由Yandex团队提出的前端CSS类名命名方法论，通过块、元素、修饰符三部分构建清晰的组件结构，是现代前端开发中广泛采用的CSS模块化方案。  核心价值：提升CSS代码可维护性、避免样式冲突、支持组件复用，尤其适配中大型前端项目。  基础标识：双下划线__连接块与元素，双连字符--表示修饰符，示例：.menu__it">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS 命名规范 - BEM">
+<meta property="og:url" content="https://www.wjnba.top/articles/202603057adca3656412.html">
+<meta property="og:site_name" content="wjnba的博客">
+<meta property="og:description" content="一、BEM基础介绍 定义：BEM（Block Element Modifier）是由Yandex团队提出的前端CSS类名命名方法论，通过块、元素、修饰符三部分构建清晰的组件结构，是现代前端开发中广泛采用的CSS模块化方案。  核心价值：提升CSS代码可维护性、避免样式冲突、支持组件复用，尤其适配中大型前端项目。  基础标识：双下划线__连接块与元素，双连字符--表示修饰符，示例：.menu__it">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://pic.wjnba.top/img/blog-cover-40.png">
+<meta property="article:published_time" content="2026-03-05T08:24:54.000Z">
+<meta property="article:modified_time" content="2026-03-05T08:43:49.768Z">
+<meta property="article:author" content="wjnba">
+<meta property="article:tag" content="css">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic.wjnba.top/img/blog-cover-40.png"><link rel="shortcut icon" href="https://q1.qlogo.cn/g?b=qq&nk=1746040223&s=100"><link rel="canonical" href="https://www.wjnba.top/articles/202603057adca3656412"><script>(function() {
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    } else {
+      bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();</script><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="/pluginsSrc/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="/pluginsSrc/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="/pluginsSrc/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: {"limitDay":30,"position":"top","messagePrev":"这篇文章已经发表了","messageNext":"天了，其中某些内容可能已经过时。"},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: wjnba","link":"链接: ","source":"来源: wjnba的博客","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#6f42c1","bgDark":"#6f42c1","position":"top-left"},
+  source: {
+    justifiedGallery: {
+      js: '/pluginsSrc/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: '/pluginsSrc/flickr-justified-gallery/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'CSS 命名规范 - BEM',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2026-03-05 16:43:49'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/custom.css"><link rel="stylesheet" href="/css/function.min.css"><meta name="baidu-site-verification" content="codeva-pEF91p4v9G" /><!-- hexo injector head_end start --><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css" media="defer" onload="this.media='all'"><script src="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js"></script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="wjnba的博客" type="application/atom+xml">
+</head><body><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><div class="loading-img"></div><div class="loading-image-dot"></div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://q1.qlogo.cn/g?b=qq&amp;nk=1746040223&amp;s=100" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">39</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">28</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">15</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-book"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 图册</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://hot.wjnba.top/#/"><i class="fa-fw fa-solid fa-fire"></i><span> 热榜</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-user-group"></i><span> 社交</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/comments/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></li><li><a class="site-page child" href="/fcircle/"><i class="fa-fw fas fa-wifi"></i><span> 朋友圈</span></a></li><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/collections/"><i class="fa-fw fas fa-infinity"></i><span> 网址收藏</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://pic.wjnba.top/img/202603/20260305164143.webp')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">wjnba的博客</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-book"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 图册</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://hot.wjnba.top/#/"><i class="fa-fw fa-solid fa-fire"></i><span> 热榜</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-user-group"></i><span> 社交</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/comments/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></li><li><a class="site-page child" href="/fcircle/"><i class="fa-fw fas fa-wifi"></i><span> 朋友圈</span></a></li><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/collections/"><i class="fa-fw fas fa-infinity"></i><span> 网址收藏</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">CSS 命名规范 - BEM</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-03-05T08:24:54.000Z" title="发表于 2026-03-05 16:24:54">2026-03-05</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/">代码规范</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.9k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>7分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="CSS 命名规范 - BEM"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="一、BEM基础介绍"><a href="#一、BEM基础介绍" class="headerlink" title="一、BEM基础介绍"></a>一、BEM基础介绍</h2><ol>
+<li><p><strong>定义</strong>：BEM（Block Element Modifier）是由Yandex团队提出的前端CSS类名命名方法论，通过<strong>块、元素、修饰符</strong>三部分构建清晰的组件结构，是现代前端开发中广泛采用的CSS模块化方案。</p>
+</li>
+<li><p><strong>核心价值</strong>：提升CSS代码可维护性、避免样式冲突、支持组件复用，尤其适配中大型前端项目。</p>
+</li>
+<li><p><strong>基础标识</strong>：双下划线<code>__</code>连接块与元素，双连字符<code>--</code>表示修饰符，示例：<code>.menu__item--active</code>。</p>
+</li>
+</ol>
+<h2 id="二、BEM核心概念"><a href="#二、BEM核心概念" class="headerlink" title="二、BEM核心概念"></a>二、BEM核心概念</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>组成部分</th>
+<th>描述</th>
+<th>示例</th>
+<th>核心作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Block（块）</td>
+<td>独立且有意义的组件</td>
+<td><code>.header</code>、<code>.menu</code>、<code>.card</code></td>
+<td>表示可独立复用的基础组件</td>
+</tr>
+<tr>
+<td>Element（元素）</td>
+<td>块的组成部分</td>
+<td><code>.menu__item</code>、<code>.card__title</code></td>
+<td>块的从属部分，无法独立存在</td>
+</tr>
+<tr>
+<td>Modifier（修饰符）</td>
+<td>块/元素的状态/变体</td>
+<td><code>.menu--vertical</code>、<code>.card__button--disabled</code></td>
+<td>表示组件的不同状态或样式变体</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="三、命名语法规则"><a href="#三、命名语法规则" class="headerlink" title="三、命名语法规则"></a>三、命名语法规则</h2><h3 id="1-基本语法结构"><a href="#1-基本语法结构" class="headerlink" title="1. 基本语法结构"></a>1. 基本语法结构</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">/* 块 */</span></span><br><span class="line"><span class="selector-class">.block</span> &#123;&#125;</span><br><span class="line"><span class="comment">/* 块-元素 */</span></span><br><span class="line"><span class="selector-class">.block__element</span> &#123;&#125;</span><br><span class="line"><span class="comment">/* 块-修饰符 */</span></span><br><span class="line"><span class="selector-class">.block--modifier</span> &#123;&#125;</span><br><span class="line"><span class="comment">/* 块-元素-修饰符 */</span></span><br><span class="line"><span class="selector-class">.block__element--modifier</span> &#123;&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="2-分隔符说明"><a href="#2-分隔符说明" class="headerlink" title="2. 分隔符说明"></a>2. 分隔符说明</h3><ul>
+<li><p><code>__</code>（双下划线）：仅用于连接<strong>块</strong>和<strong>元素</strong>，无其他用途；</p>
+</li>
+<li><p><code>--</code>（双连字符）：仅用于连接<strong>块/元素</strong>和<strong>修饰符</strong>；</p>
+</li>
+<li><p><code>-</code>（单连字符）：可选，用于多单词名称的连接，示例：<code>.search-form</code>、<code>.nav__submenu</code>。</p>
+</li>
+</ul>
+<h2 id="四、BEM命名核心原则"><a href="#四、BEM命名核心原则" class="headerlink" title="四、BEM命名核心原则"></a>四、BEM命名核心原则</h2><h3 id="1-块（Block）的独立性"><a href="#1-块（Block）的独立性" class="headerlink" title="1. 块（Block）的独立性"></a>1. 块（Block）的独立性</h3><ul>
+<li><p>可在页面任意位置复用，不依赖其他元素/块；</p>
+</li>
+<li><p>块本身不设置外边距（margin），由其容器控制位置。</p>
+</li>
+</ul>
+<h3 id="2-元素（Element）的从属性"><a href="#2-元素（Element）的从属性" class="headerlink" title="2. 元素（Element）的从属性"></a>2. 元素（Element）的从属性</h3><ul>
+<li><p>元素名称必须归属某个块，格式固定为<code>block__element</code>；</p>
+</li>
+<li><p>同一块内的不同元素可嵌套，无需考虑嵌套层级。</p>
+</li>
+</ul>
+<h3 id="3-修饰符（Modifier）的可选性"><a href="#3-修饰符（Modifier）的可选性" class="headerlink" title="3. 修饰符（Modifier）的可选性"></a>3. 修饰符（Modifier）的可选性</h3><ul>
+<li><p>修饰符不能单独使用，必须与块/元素类名配合；</p>
+</li>
+<li><p>同一元素可添加多个修饰符，实现多状态组合；</p>
+</li>
+<li><p>格式为<code>block--modifier</code>（块修饰）或<code>block__element--modifier</code>（元素修饰）。</p>
+</li>
+</ul>
+<h2 id="五、完整代码示例"><a href="#五、完整代码示例" class="headerlink" title="五、完整代码示例"></a>五、完整代码示例</h2><h3 id="1-HTML结构"><a href="#1-HTML结构" class="headerlink" title="1. HTML结构"></a>1. HTML结构</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 搜索组件（块） --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">class</span>=<span class="string">&quot;search-form&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">class</span>=<span class="string">&quot;search-form__input&quot;</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">placeholder</span>=<span class="string">&quot;搜索...&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&quot;search-form__button search-form__button--primary&quot;</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span>&gt;</span>搜索<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&quot;search-form__button search-form__button--secondary&quot;</span> <span class="attr">type</span>=<span class="string">&quot;reset&quot;</span>&gt;</span>重置<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 卡片组件（块+修饰符） --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;card card--featured&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">class</span>=<span class="string">&quot;card__image&quot;</span> <span class="attr">src</span>=<span class="string">&quot;image.jpg&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;示例&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">h3</span> <span class="attr">class</span>=<span class="string">&quot;card__title&quot;</span>&gt;</span>特荐产品<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;card__description card__description--truncated&quot;</span>&gt;</span>这是一个很长的描述文本，会被截断显示...<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&quot;card__button&quot;</span>&gt;</span>了解更多<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-对应CSS样式"><a href="#2-对应CSS样式" class="headerlink" title="2. 对应CSS样式"></a>2. 对应CSS样式</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">/* 搜索表单块 */</span></span><br><span class="line"><span class="selector-class">.search-form</span> &#123; <span class="attribute">display</span>: flex; gap: <span class="number">10px</span>; <span class="attribute">padding</span>: <span class="number">20px</span>; <span class="attribute">background</span>: <span class="number">#f5f5f5</span>; &#125;</span><br><span class="line"><span class="comment">/* 搜索表单元素 */</span></span><br><span class="line"><span class="selector-class">.search-form__input</span> &#123; <span class="attribute">flex</span>: <span class="number">1</span>; <span class="attribute">padding</span>: <span class="number">10px</span>; <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#ddd</span>; <span class="attribute">border-radius</span>: <span class="number">4px</span>; &#125;</span><br><span class="line"><span class="selector-class">.search-form__button</span> &#123; <span class="attribute">padding</span>: <span class="number">10px</span> <span class="number">20px</span>; <span class="attribute">border</span>: none; <span class="attribute">border-radius</span>: <span class="number">4px</span>; <span class="attribute">cursor</span>: pointer; &#125;</span><br><span class="line"><span class="comment">/* 搜索表单元素修饰符 */</span></span><br><span class="line"><span class="selector-class">.search-form__button--primary</span> &#123; <span class="attribute">background-color</span>: <span class="number">#007bff</span>; <span class="attribute">color</span>: white; &#125;</span><br><span class="line"><span class="selector-class">.search-form__button--secondary</span> &#123; <span class="attribute">background-color</span>: <span class="number">#6c757d</span>; <span class="attribute">color</span>: white; &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 卡片块 */</span></span><br><span class="line"><span class="selector-class">.card</span> &#123; <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#e0e0e0</span>; <span class="attribute">border-radius</span>: <span class="number">8px</span>; <span class="attribute">padding</span>: <span class="number">20px</span>; <span class="attribute">max-width</span>: <span class="number">300px</span>; &#125;</span><br><span class="line"><span class="comment">/* 卡片块修饰符 */</span></span><br><span class="line"><span class="selector-class">.card--featured</span> &#123; <span class="attribute">border-color</span>: <span class="number">#007bff</span>; <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">4px</span> <span class="number">12px</span> <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">123</span>, <span class="number">255</span>, <span class="number">0.2</span>); &#125;</span><br><span class="line"><span class="comment">/* 卡片元素 */</span></span><br><span class="line"><span class="selector-class">.card__title</span> &#123; <span class="attribute">font-size</span>: <span class="number">1.5rem</span>; <span class="attribute">margin-bottom</span>: <span class="number">10px</span>; <span class="attribute">color</span>: <span class="number">#333</span>; &#125;</span><br><span class="line"><span class="selector-class">.card__description</span> &#123; <span class="attribute">color</span>: <span class="number">#666</span>; <span class="attribute">line-height</span>: <span class="number">1.5</span>; &#125;</span><br><span class="line"><span class="selector-class">.card__button</span> &#123; <span class="attribute">margin-top</span>: <span class="number">15px</span>; <span class="attribute">padding</span>: <span class="number">8px</span> <span class="number">16px</span>; <span class="attribute">background-color</span>: <span class="number">#28a745</span>; <span class="attribute">color</span>: white; <span class="attribute">border</span>: none; <span class="attribute">border-radius</span>: <span class="number">4px</span>; &#125;</span><br><span class="line"><span class="comment">/* 卡片元素修饰符 */</span></span><br><span class="line"><span class="selector-class">.card__description--truncated</span> &#123; <span class="attribute">display</span>: -webkit-box; -webkit-line-clamp: <span class="number">3</span>; -webkit-box-orient: vertical; <span class="attribute">overflow</span>: hidden; &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="六、实际项目应用场景"><a href="#六、实际项目应用场景" class="headerlink" title="六、实际项目应用场景"></a>六、实际项目应用场景</h2><h3 id="1-导航菜单"><a href="#1-导航菜单" class="headerlink" title="1. 导航菜单"></a>1. 导航菜单</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">nav</span> <span class="attr">class</span>=<span class="string">&quot;nav&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">&quot;nav__list&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;nav__item&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">&quot;nav__link nav__link--active&quot;</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>首页<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;nav__item nav__item--dropdown&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">&quot;nav__link&quot;</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>服务<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">&quot;nav__submenu&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;nav__subitem&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">&quot;nav__sublink&quot;</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>设计<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">nav</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-表单控件（带错误状态）"><a href="#2-表单控件（带错误状态）" class="headerlink" title="2. 表单控件（带错误状态）"></a>2. 表单控件（带错误状态）</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;form-field&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">label</span> <span class="attr">class</span>=<span class="string">&quot;form-field__label&quot;</span> <span class="attr">for</span>=<span class="string">&quot;email&quot;</span>&gt;</span>邮箱<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">class</span>=<span class="string">&quot;form-field__input form-field__input--error&quot;</span> <span class="attr">id</span>=<span class="string">&quot;email&quot;</span> <span class="attr">type</span>=<span class="string">&quot;email&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;form-field__error-message&quot;</span>&gt;</span>请输入有效的邮箱地址<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="3-响应式修饰符"><a href="#3-响应式修饰符" class="headerlink" title="3. 响应式修饰符"></a>3. 响应式修饰符</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">/* 移动端隐藏，平板及以上显示 */</span></span><br><span class="line"><span class="selector-class">.menu__item--hidden-mobile</span> &#123; <span class="attribute">display</span>: none; &#125;</span><br><span class="line"><span class="keyword">@media</span> (<span class="attribute">min-width</span>: <span class="number">768px</span>) &#123;</span><br><span class="line">  <span class="selector-class">.menu__item--hidden-mobile</span> &#123; <span class="attribute">display</span>: block; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="七、BEM的常见变体"><a href="#七、BEM的常见变体" class="headerlink" title="七、BEM的常见变体"></a>七、BEM的常见变体</h2><h3 id="1-BEM-Sass-SCSS（推荐）"><a href="#1-BEM-Sass-SCSS（推荐）" class="headerlink" title="1. BEM + Sass/SCSS（推荐）"></a>1. BEM + Sass/SCSS（推荐）</h3><p>利用Sass嵌套语法简化书写，通过<code>&amp;</code>引用父选择器，保持代码层级清晰：</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="selector-class">.menu</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  &amp;__list &#123; <span class="attribute">list-style</span>: none; &#125;</span><br><span class="line">  &amp;__item &#123;</span><br><span class="line">    <span class="attribute">margin-right</span>: <span class="number">20px</span>;</span><br><span class="line">    &amp;--active &#123; <span class="attribute">font-weight</span>: bold; &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  &amp;__link &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#333</span>;</span><br><span class="line">    &amp;<span class="selector-pseudo">:hover</span> &#123; <span class="attribute">color</span>: <span class="number">#007bff</span>; &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="2-命名空间变体"><a href="#2-命名空间变体" class="headerlink" title="2. 命名空间变体"></a>2. 命名空间变体</h3><p>为类名添加前缀，区分组件类型，提升可读性：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="selector-class">.c-card</span> &#123;&#125;        <span class="comment">/* c-：通用组件（Component） */</span></span><br><span class="line"><span class="selector-class">.l-header</span> &#123;&#125;      <span class="comment">/* l-：布局组件（Layout） */</span></span><br><span class="line"><span class="selector-class">.u-text-center</span> &#123;&#125; <span class="comment">/* u-：工具类（Utility） */</span></span><br><span class="line"><span class="selector-class">.js-modal</span> &#123;&#125;      <span class="comment">/* js-：JavaScript钩子（仅用于JS操作，不写样式） */</span></span><br></pre></td></tr></table></figure>
+<h3 id="3-更严格的BEM"><a href="#3-更严格的BEM" class="headerlink" title="3. 更严格的BEM"></a>3. 更严格的BEM</h3><p>避免元素嵌套式命名，采用扁平结构，防止类名过长：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">/* 推荐 */</span></span><br><span class="line"><span class="selector-class">.block__element2-child</span> &#123;&#125;</span><br><span class="line"><span class="comment">/* 禁止 */</span></span><br><span class="line"><span class="selector-class">.block__element2__child</span> &#123;&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="八、BEM的优缺点"><a href="#八、BEM的优缺点" class="headerlink" title="八、BEM的优缺点"></a>八、BEM的优缺点</h2><h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ol>
+<li><p>结构清晰：直观体现HTML与CSS的对应关系，易读易维护；</p>
+</li>
+<li><p>避免冲突：每个类名都有独立命名空间，解决样式污染问题；</p>
+</li>
+<li><p>减少嵌套：仅需一层选择器，降低CSS选择器特异性，提升渲染性能；</p>
+</li>
+<li><p>便于协作：统一命名规范，减少团队沟通成本；</p>
+</li>
+<li><p>模块化：组件可独立开发、测试和复用，适配工程化开发。</p>
+</li>
+</ol>
+<h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3><ul>
+<li>类名长度偏长，纯手写时稍显繁琐（可通过Sass/PostCSS工具优化）。</li>
+</ul>
+<h2 id="九、使用注意事项"><a href="#九、使用注意事项" class="headerlink" title="九、使用注意事项"></a>九、使用注意事项</h2><ol>
+<li><p><strong>避免过度使用</strong>：简单项目/小组件无需完整BEM，避免冗余；</p>
+</li>
+<li><p><strong>坚持语义化命名</strong>：根据功能命名，而非样式，示例：用<code>.box__status--error</code>代替<code>.box__red</code>；</p>
+</li>
+<li><p><strong>控制类名长度</strong>：若类名过长，需重新设计组件结构，拆分独立块；</p>
+</li>
+<li><p><strong>兼容其他方案</strong>：可与CSS-in-JS、Bootstrap等框架结合使用，用于自定义组件；</p>
+</li>
+<li><p><strong>修饰符必配合基础类</strong>：不可单独写<code>.button--primary</code>，需与<code>.button</code>配合。</p>
+</li>
+</ol>
+<h2 id="十、BEM与其他CSS命名方法对比"><a href="#十、BEM与其他CSS命名方法对比" class="headerlink" title="十、BEM与其他CSS命名方法对比"></a>十、BEM与其他CSS命名方法对比</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>核心理念</th>
+<th>优点</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BEM</td>
+<td>块-元素-修饰符</td>
+<td>结构清晰，避免冲突，易协作</td>
+<td>类名较长</td>
+</tr>
+<tr>
+<td>OOCSS</td>
+<td>对象化CSS</td>
+<td>高度复用，分离结构与皮肤</td>
+<td>需抽象思维，对初学者不友好</td>
+</tr>
+<tr>
+<td>SMACSS</td>
+<td>可扩展模块化架构</td>
+<td>分类清晰，适配大型项目</td>
+<td>规则较多，配置繁琐</td>
+</tr>
+<tr>
+<td>ITCSS</td>
+<td>倒三角CSS</td>
+<td>层次分明，精准控制选择器特异性</td>
+<td>学习曲线较陡</td>
+</tr>
+<tr>
+<td>Atomic CSS</td>
+<td>原子化CSS</td>
+<td>极致复用，样式文件体积小</td>
+<td>类名无语义，可读性差</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="十一、学习与实践建议"><a href="#十一、学习与实践建议" class="headerlink" title="十一、学习与实践建议"></a>十一、学习与实践建议</h2><ol>
+<li><p><strong>从简入手</strong>：先在单个小组件（如按钮、卡片）上实践，再逐步推广到整个项目；</p>
+</li>
+<li><p><strong>团队统一规范</strong>：约定分隔符、命名空间、多单词连接方式，保持项目内一致性；</p>
+</li>
+<li><p><strong>结合工具</strong>：使用Sass/SCSS嵌套、PostCSS插件简化BEM书写，提升效率；</p>
+</li>
+<li><p><strong>文档化</strong>：为复杂组件编写BEM结构文档，方便团队查阅和维护；</p>
+</li>
+<li><p><strong>灵活适配</strong>：根据项目规模调整BEM严格程度，无需生搬硬套规则。 </p>
+</li>
+</ol>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://www.wjnba.top">wjnba</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://www.wjnba.top/articles/202603057adca3656412.html">https://www.wjnba.top/articles/202603057adca3656412.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://www.wjnba.top" target="_blank">wjnba的博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/css/">css</a></div><div class="post_share"><div class="social-share" data-image="https://pic.wjnba.top/img/blog-cover-40.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="/pluginsSrc/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="/pluginsSrc/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat-pay.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/wechat-pay.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay-pay.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/alipay-pay.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/articles/202507040a0f7abfb535.html"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic.wjnba.top/img/blog-cover-39.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">关于this的理解</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/articles/20240402d6b5aa8c7fec.html" title="CSS媒体查询"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic.wjnba.top/img/blog-cover-30.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-04-02</div><div class="title">CSS媒体查询</div></div></a></div><div><a href="/articles/20230523844402ea9656.html" title="实现五种CSS经典布局"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic.wjnba.top/img/blog-cover-4.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-05-23</div><div class="title">实现五种CSS经典布局</div></div></a></div><div><a href="/articles/20211119cb59809120da.html" title="css居中的几种方式"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic.wjnba.top/img/blog-cover-27.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-11-19</div><div class="title">css居中的几种方式</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://q1.qlogo.cn/g?b=qq&amp;nk=1746040223&amp;s=100" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">wjnba</div><div class="author-info__description">vue,前端,IT,技术</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">39</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">28</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">15</div></a></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/wjnba" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:1746040223@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="Rss"><i class="fas fa-rss"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div id="welcome-info"></div><div class="announcement_content">如果阅读过程中遇到了问题，请及时评论或者留言，看到了会在第一时间给出回复。</div></div><div class="card-widget" style="overflow: initial;"><div class="wj-video-container"><section id="wj-main"><video id="wj-player" src="http://api.yujn.cn/api/zzxjj.php" controls="controls" muted="muted" autoplay="autoplay"></video></section></div><div class="wj-button-container"><button id="wj-switch">连续: 开</button><button id="wj-next1">换一个</button><button id="wj-changeSource">换源</button><div id="wj-sourceSelectContainer"><select id="wj-sourceSelect"><option value="http://api.yujn.cn/api/zzxjj.php" title="http://api.yujn.cn/api/zzxjj.php">线路0</option><option value="https://jx.iqfk.top/api/sjsp.php" title="https://jx.iqfk.top/api/sjsp.php">线路1</option><option value="https://www.cunshao.com/666666/api/web.php" title="https://www.cunshao.com/666666/api/web.php">线路2</option><option value="https://www.cunshao.com/666666/api/pc.php" title="https://www.cunshao.com/666666/api/pc.php">线路3</option><option value="https://api.qoc.cc/api/xjj" title="https://api.qoc.cc/api/xjj">线路4</option><option value="http://v.nrzj.vip/video.php" title="http://v.nrzj.vip/video.php">线路5</option><option value="http://api.yujn.cn/api/xjj.php" title="http://api.yujn.cn/api/xjj.php">线路6</option></select><button id="wj-applySource" style="width: 100%;padding: 3px 0;margin-top: 4px;">应用</button></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81BEM%E5%9F%BA%E7%A1%80%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.</span> <span class="toc-text">一、BEM基础介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81BEM%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5"><span class="toc-number">2.</span> <span class="toc-text">二、BEM核心概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%91%BD%E5%90%8D%E8%AF%AD%E6%B3%95%E8%A7%84%E5%88%99"><span class="toc-number">3.</span> <span class="toc-text">三、命名语法规则</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E7%BB%93%E6%9E%84"><span class="toc-number">3.1.</span> <span class="toc-text">1. 基本语法结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%88%86%E9%9A%94%E7%AC%A6%E8%AF%B4%E6%98%8E"><span class="toc-number">3.2.</span> <span class="toc-text">2. 分隔符说明</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81BEM%E5%91%BD%E5%90%8D%E6%A0%B8%E5%BF%83%E5%8E%9F%E5%88%99"><span class="toc-number">4.</span> <span class="toc-text">四、BEM命名核心原则</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%9D%97%EF%BC%88Block%EF%BC%89%E7%9A%84%E7%8B%AC%E7%AB%8B%E6%80%A7"><span class="toc-number">4.1.</span> <span class="toc-text">1. 块（Block）的独立性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%85%83%E7%B4%A0%EF%BC%88Element%EF%BC%89%E7%9A%84%E4%BB%8E%E5%B1%9E%E6%80%A7"><span class="toc-number">4.2.</span> <span class="toc-text">2. 元素（Element）的从属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E4%BF%AE%E9%A5%B0%E7%AC%A6%EF%BC%88Modifier%EF%BC%89%E7%9A%84%E5%8F%AF%E9%80%89%E6%80%A7"><span class="toc-number">4.3.</span> <span class="toc-text">3. 修饰符（Modifier）的可选性</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E5%AE%8C%E6%95%B4%E4%BB%A3%E7%A0%81%E7%A4%BA%E4%BE%8B"><span class="toc-number">5.</span> <span class="toc-text">五、完整代码示例</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-HTML%E7%BB%93%E6%9E%84"><span class="toc-number">5.1.</span> <span class="toc-text">1. HTML结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%AF%B9%E5%BA%94CSS%E6%A0%B7%E5%BC%8F"><span class="toc-number">5.2.</span> <span class="toc-text">2. 对应CSS样式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E5%AE%9E%E9%99%85%E9%A1%B9%E7%9B%AE%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-number">6.</span> <span class="toc-text">六、实际项目应用场景</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%AF%BC%E8%88%AA%E8%8F%9C%E5%8D%95"><span class="toc-number">6.1.</span> <span class="toc-text">1. 导航菜单</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E8%A1%A8%E5%8D%95%E6%8E%A7%E4%BB%B6%EF%BC%88%E5%B8%A6%E9%94%99%E8%AF%AF%E7%8A%B6%E6%80%81%EF%BC%89"><span class="toc-number">6.2.</span> <span class="toc-text">2. 表单控件（带错误状态）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%93%8D%E5%BA%94%E5%BC%8F%E4%BF%AE%E9%A5%B0%E7%AC%A6"><span class="toc-number">6.3.</span> <span class="toc-text">3. 响应式修饰符</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%83%E3%80%81BEM%E7%9A%84%E5%B8%B8%E8%A7%81%E5%8F%98%E4%BD%93"><span class="toc-number">7.</span> <span class="toc-text">七、BEM的常见变体</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-BEM-Sass-SCSS%EF%BC%88%E6%8E%A8%E8%8D%90%EF%BC%89"><span class="toc-number">7.1.</span> <span class="toc-text">1. BEM + Sass&#x2F;SCSS（推荐）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4%E5%8F%98%E4%BD%93"><span class="toc-number">7.2.</span> <span class="toc-text">2. 命名空间变体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%9B%B4%E4%B8%A5%E6%A0%BC%E7%9A%84BEM"><span class="toc-number">7.3.</span> <span class="toc-text">3. 更严格的BEM</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AB%E3%80%81BEM%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="toc-number">8.</span> <span class="toc-text">八、BEM的优缺点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%98%E7%82%B9"><span class="toc-number">8.1.</span> <span class="toc-text">优点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%BA%E7%82%B9"><span class="toc-number">8.2.</span> <span class="toc-text">缺点</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%9D%E3%80%81%E4%BD%BF%E7%94%A8%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-number">9.</span> <span class="toc-text">九、使用注意事项</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81%E3%80%81BEM%E4%B8%8E%E5%85%B6%E4%BB%96CSS%E5%91%BD%E5%90%8D%E6%96%B9%E6%B3%95%E5%AF%B9%E6%AF%94"><span class="toc-number">10.</span> <span class="toc-text">十、BEM与其他CSS命名方法对比</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81%E4%B8%80%E3%80%81%E5%AD%A6%E4%B9%A0%E4%B8%8E%E5%AE%9E%E8%B7%B5%E5%BB%BA%E8%AE%AE"><span class="toc-number">11.</span> <span class="toc-text">十一、学习与实践建议</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/articles/202603057adca3656412.html" title="CSS 命名规范 - BEM"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic.wjnba.top/img/blog-cover-40.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="CSS 命名规范 - BEM"/></a><div class="content"><a class="title" href="/articles/202603057adca3656412.html" title="CSS 命名规范 - BEM">CSS 命名规范 - BEM</a><time datetime="2026-03-05T08:24:54.000Z" title="发表于 2026-03-05 16:24:54">2026-03-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/202507040a0f7abfb535.html" title="关于this的理解"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic.wjnba.top/img/blog-cover-39.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="关于this的理解"/></a><div class="content"><a class="title" href="/articles/202507040a0f7abfb535.html" title="关于this的理解">关于this的理解</a><time datetime="2025-07-04T07:00:30.000Z" title="发表于 2025-07-04 15:00:30">2025-07-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/20241022bb4ed2208a4c.html" title="Sourcetree GIt工作流使用及分支开发模式"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic.wjnba.top/img/blog-cover-38.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Sourcetree GIt工作流使用及分支开发模式"/></a><div class="content"><a class="title" href="/articles/20241022bb4ed2208a4c.html" title="Sourcetree GIt工作流使用及分支开发模式">Sourcetree GIt工作流使用及分支开发模式</a><time datetime="2024-10-22T08:36:27.000Z" title="发表于 2024-10-22 16:36:27">2024-10-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/202410188aafe27d2b6b.html" title="正则表达式学习"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic.wjnba.top/img/blog-cover-37.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="正则表达式学习"/></a><div class="content"><a class="title" href="/articles/202410188aafe27d2b6b.html" title="正则表达式学习">正则表达式学习</a><time datetime="2024-10-18T08:06:49.000Z" title="发表于 2024-10-18 16:06:49">2024-10-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/articles/20241011497ebe003dad.html" title="vue3常用的API"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic.wjnba.top/img/blog-cover-36.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vue3常用的API"/></a><div class="content"><a class="title" href="/articles/20241011497ebe003dad.html" title="vue3常用的API">vue3常用的API</a><time datetime="2024-10-11T02:47:13.000Z" title="发表于 2024-10-11 10:47:13">2024-10-11</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://pic.wjnba.top/img/202603/20260305164143.webp')"><div id="footer-wrap"><div class="copyright">&copy;2021 - 2026 By wjnba</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="chat_btn" type="button" title="聊天"><i class="fas fa-sms"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="/pluginsSrc/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="/pluginsSrc/instant.page/instantpage.js" type="module"></script><script src="/pluginsSrc/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="/pluginsSrc/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('/pluginsSrc/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>(()=>{
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://twikoo.wjnba.top/',
+      region: '',
+      onCommentLoaded: function () {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+  }
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://twikoo.wjnba.top/',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(function (res) {
+      countELement.innerText = res[0].count
+    }).catch(function (err) {
+      console.error(err);
+    });
+  }
+
+  const runFn = () => {
+    init()
+    GLOBAL_CONFIG_SITE.isPost && getCount()
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') {
+      setTimeout(runFn,0)
+      return
+    } 
+    getScript('/pluginsSrc/twikoo/dist/twikoo.all.min.js').then(runFn)
+  }
+
+  if ('Twikoo' === 'Twikoo' || !true) {
+    if (true) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = () => {
+      loadTwikoo()
+    }
+  }
+})()</script></div><script>window.addEventListener('load', () => {
+  const changeContent = (content) => {
+    if (content === '') return content
+
+    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
+    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[链接]') // replace url
+    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[代码]') // replace code
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
+
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
+
+  const getComment = () => {
+    const runTwikoo = () => {
+      twikoo.getRecentComments({
+        envId: 'https://twikoo.wjnba.top/',
+        region: '',
+        pageSize: 6,
+        includeReply: true
+      }).then(function (res) {
+        const twikooArray = res.map(e => {
+          return {
+            'content': changeContent(e.comment),
+            'avatar': e.avatar,
+            'nick': e.nick,
+            'url': e.url + '#' + e.id,
+            'date': new Date(e.created).toISOString()
+          }
+        })
+
+        saveToLocal.set('twikoo-newest-comments', JSON.stringify(twikooArray), 10/(60*24))
+        generateHtml(twikooArray)
+      }).catch(function (err) {
+        const $dom = document.querySelector('#card-newest-comments .aside-list')
+        $dom.innerHTML= "无法获取评论，请确认相关配置是否正确"
+      })
+    }
+
+    if (typeof twikoo === 'object') {
+      runTwikoo()
+    } else {
+      getScript('/pluginsSrc/twikoo/dist/twikoo.all.min.js').then(runTwikoo)
+    }
+  }
+
+  const generateHtml = array => {
+    let result = ''
+
+    if (array.length) {
+      for (let i = 0; i < array.length; i++) {
+        result += '<div class=\'aside-list-item\'>'
+
+        if (true) {
+          const name = 'data-lazy-src'
+          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'></a>`
+        }
+        
+        result += `<div class='content'>
+        <a class='comment' href='${array[i].url}' title='${array[i].content}'>${array[i].content}</a>
+        <div class='name'><span>${array[i].nick} / </span><time datetime="${array[i].date}">${btf.diffDate(array[i].date, true)}</time></div>
+        </div></div>`
+      }
+    } else {
+      result += '没有评论'
+    }
+
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom.innerHTML= result
+    window.lazyLoadInstance && window.lazyLoadInstance.update()
+    window.pjax && window.pjax.refresh($dom)
+  }
+
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('twikoo-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getComment()
+      }
+    }
+  }
+
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script><script src="/js/jquery.min.js"></script><script async data-pjax src="/js/txmap.js"></script><script async data-pjax src="/js/randomVideo.js"></script><script src="/pluginsSrc/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-heart" src="/pluginsSrc/butterfly-extsrc/dist/click-heart.min.js" async="async" mobile="false"></script><script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/e96e74c4.js","daovoice")
+</script><script>var isChatBtn = true
+daovoice('init', {
+  app_id: 'e96e74c4',},{
+  launcher: { 
+     disableLauncherIcon: isChatBtn // 悬浮 ICON 是否显示
+  },
+});
+daovoice('update');
+
+if (isChatBtn) {
+  var chatBtnFn = () => {
+    var chatBtn = document.getElementById("chat_btn")
+    chatBtn.addEventListener("click", function(){
+      daovoice('show')
+    });
+  }
+  chatBtnFn()
+} else {
+  if (true) {
+    function chatBtnHide () {
+      daovoice('update', {},{
+        launcher: { 
+        disableLauncherIcon: true // 悬浮 ICON 是否显示
+        },
+      });
+    }
+    function chatBtnShow () {
+      daovoice('update', {},{
+        launcher: { 
+        disableLauncherIcon: false // 悬浮 ICON 是否显示
+        },
+      });
+    }
+  }
+}</script><script src="/pluginsSrc/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"]):not([href="/fcircle/"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  typeof preloader === 'object' && preloader.initLoading()
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --><script defer src="https://npm.elemecdn.com/jquery@latest/dist/jquery.min.js"></script><script defer src="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/issues.js"></script><script async src="//at.alicdn.com/t/font_2032782_8d5kxvn09md.js"></script><!-- hexo injector body_end end --></body></html>
